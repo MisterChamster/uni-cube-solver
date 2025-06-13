@@ -8,5 +8,5 @@ include_directories(include)
 add_executable(
     main
     main.cxx
-    # src/colors.cxx
+    src/wall.cxx
 )
