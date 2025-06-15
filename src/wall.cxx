@@ -77,3 +77,9 @@ void Wall::rotate_2() {
     rotate_right();
     rotate_right();
 }
+
+// Checks if the cube is one-color.
+// NEEDS IMPLEMENTING
+bool is_one_color(){
+    return false;
+}

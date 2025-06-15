@@ -20,6 +20,7 @@ public:
     void rotate_right();
     void rotate_left();
     void rotate_2();
+    bool is_one_color();
 };
 
 #endif //WALL

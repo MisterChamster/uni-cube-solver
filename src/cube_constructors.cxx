@@ -5,6 +5,7 @@
 
 
 
+//solved cube constructor
 Cube::Cube(){
 }
 

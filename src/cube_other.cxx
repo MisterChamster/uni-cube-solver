@@ -8,5 +8,5 @@
 void Cube::print_cube(){
 };
 
-void Cube::check_solved(){
+bool Cube::is_solved(){
 };
