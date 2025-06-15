@@ -4,3 +4,9 @@
 #include <iostream>
 
 
+
+void Cube::print_cube(){
+};
+
+void Cube::check_solved(){
+};
