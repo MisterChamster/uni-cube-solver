@@ -1,7 +1,7 @@
 #ifndef WALL
 #define WALL
 
-#include <colors.h>
+#include "colors.h"
 
 class Wall {
 public:

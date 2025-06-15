@@ -1,8 +1,8 @@
 #ifndef CUBE
 #define CUBE
 
-#include <wall.h>
-#include <colors.h>
+#include "wall.h"
+#include "colors.h"
 
 class Cube{
     // ========================================================================
