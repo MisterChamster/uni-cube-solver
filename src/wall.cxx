@@ -2,6 +2,8 @@
 #include "colors.h"
 #include <iostream>
 
+
+
 Wall::Wall(Color tl, Color tm, Color tr,
            Color ml, Color mm, Color mr,
            Color dl, Color dm, Color dr) {
@@ -35,6 +37,8 @@ void Wall::print_wall() {
     std::cout<<" "<<dl<<" "<<dm<<" "<<dr<<std::endl;
 }
 
+// Rotates colors clockerwise.
+// Equivalent to color rotation done with F move on front wall.
 void Wall::rotate_right() {
     Color temp;
     temp = tl;
@@ -50,6 +54,8 @@ void Wall::rotate_right() {
     mr = temp;
 }
 
+// Rotates colors counter-clockerwise.
+// Equivalent to color rotation done with F' move on front wall.
 void Wall::rotate_left() {
     Color temp;
     temp = tl;
@@ -65,13 +71,9 @@ void Wall::rotate_left() {
     ml = temp;
 }
 
-void Wall::rotate_right2() {
+// Rotates colors by 180 deg.
+// Equivalent to color rotation done with 2F move on front wall.
+void Wall::rotate_2() {
     rotate_right();
     rotate_right();
 }
-
-void Wall::rotate_left2() {
-    rotate_left();
-    rotate_left();
-}
-

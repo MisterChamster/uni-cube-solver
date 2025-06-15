@@ -17,7 +17,7 @@ int main() {
             Color::green, Color::yellow, Color::orange,
             Color::green, Color::yellow, Color::red);
     w1.print_wall();
-    w1.rotate_left2();
+    w1.rotate_2();
     cout<<endl;
     w1.print_wall();
     return 0;

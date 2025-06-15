@@ -19,8 +19,7 @@ public:
     void print_wall();
     void rotate_right();
     void rotate_left();
-    void rotate_right2();
-    void rotate_left2();
+    void rotate_2();
 };
 
 #endif //WALL
