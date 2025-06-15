@@ -2,9 +2,9 @@
 #include "colors.h"
 #include <iostream>
 
-Wall::Wall(color tl, color tm, color tr,
-           color ml, color mm, color mr,
-           color dl, color dm, color dr) {
+Wall::Wall(Color tl, Color tm, Color tr,
+           Color ml, Color mm, Color mr,
+           Color dl, Color dm, Color dr) {
     this->tl = tl;
     this->tm = tm;
     this->tr = tr;
@@ -16,7 +16,7 @@ Wall::Wall(color tl, color tm, color tr,
     this->dr = dr;
 }
 
-Wall::Wall(color c) {
+Wall::Wall(Color c) {
     this->tl = c;
     this->tm = c;
     this->tr = c;
@@ -36,7 +36,7 @@ void Wall::print_wall() {
 }
 
 void Wall::rotate_right() {
-    color temp;
+    Color temp;
     temp = tl;
     tl = dl;
     dl = dr;
@@ -51,7 +51,7 @@ void Wall::rotate_right() {
 }
 
 void Wall::rotate_left() {
-    color temp;
+    Color temp;
     temp = tl;
     tl = tr;
     tr = dr;

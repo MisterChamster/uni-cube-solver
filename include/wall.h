@@ -5,15 +5,15 @@
 
 class Wall {
 public:
-    color tl, tm, tr;
-    color ml, mm, mr;
-    color dl, dm, dr;
+    Color tl, tm, tr;
+    Color ml, mm, mr;
+    Color dl, dm, dr;
 
-    Wall(color tl, color tm, color tr,
-         color ml, color mm, color mr,
-         color dl, color dm, color dr);
+    Wall(Color tl, Color tm, Color tr,
+         Color ml, Color mm, Color mr,
+         Color dl, Color dm, Color dr);
 
-    Wall(color c);
+    Wall(Color c);
 
 
     void print_wall();

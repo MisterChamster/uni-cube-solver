@@ -1,7 +1,7 @@
 #ifndef COLORS
 #define COLORS
 
-enum color{
+enum Color{
     white, green, red, blue, orange, yellow
 };
 
