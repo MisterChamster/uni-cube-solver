@@ -9,4 +9,5 @@ add_executable(
     main
     main.cxx
     src/wall.cxx
+    src/cube.cxx
 )
