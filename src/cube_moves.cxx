@@ -36,7 +36,29 @@ void Cube::F(){
 };
 void Cube::R(){
     cout<<"R ";
+    wall_right.rotate_right();
 
+    Color temp1, temp2, temp3;
+    temp1 = wall_up.dr;
+    temp2 = wall_up.mr;
+    temp3 = wall_up.tr;
+ 
+    wall_up.dr = wall_front.dr;
+    wall_up.mr = wall_front.mr;
+    wall_up.tr = wall_front.tr;
+
+    wall_front.dr = wall_down.dr;
+    wall_front.mr = wall_down.mr;
+    wall_front.tr = wall_down.tr;
+
+    wall_down.dr = wall_back.tr;
+    wall_down.mr = wall_back.ml;
+    wall_down.tr = wall_back.dl;
+
+    wall_back.tr = temp1;
+    wall_back.ml = temp2;
+    wall_back.dl = temp3;
+    
 };
 void Cube::L(){
     cout<<"L ";
