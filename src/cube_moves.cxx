@@ -62,14 +62,80 @@ void Cube::R(){
 };
 void Cube::L(){
     cout<<"L ";
+    wall_left.rotate_right();
+ 
+    Color temp1, temp2, temp3;
+    temp1 = wall_up.tl;
+    temp2 = wall_up.ml;
+    temp3 = wall_up.dl;
+
+    wall_up.tl = wall_back.dr;
+    wall_up.ml = wall_back.mr;
+    wall_up.dl = wall_back.tr;
+
+    wall_back.dr = wall_down.tl;
+    wall_back.mr = wall_down.ml;
+    wall_back.tr = wall_down.dl;
+    
+    wall_down.tl = wall_front.tl;
+    wall_down.ml = wall_front.ml;
+    wall_down.dl = wall_front.dl;
+
+    wall_front.tl = temp1;
+    wall_front.ml = temp2;
+    wall_front.dl = temp3;
     
 };
 void Cube::U(){
-    cout<<"U ";
+    cout<<"U "; // fuck why "up" and not "top" ??????
+    wall_up.rotate_right();
+ 
+    Color temp1, temp2, temp3;
+    temp1 = wall_front.tl;
+    temp2 = wall_front.tm;
+    temp3 = wall_front.tr;
+
+    wall_front.tl = wall_right.tl;
+    wall_front.tm = wall_right.tm;
+    wall_front.tr = wall_right.tr;
+ 
+    wall_right.tl = wall_back.tl;
+    wall_right.tm = wall_back.tm;
+    wall_right.tr = wall_back.tr;
+
+    wall_back.tl = wall_left.tl;
+    wall_back.tm = wall_left.tm;
+    wall_back.tr = wall_left.tr;
+
+    wall_left.tl = temp1;
+    wall_left.tm = temp2;
+    wall_left.tr = temp3;
     
 };
 void Cube::D(){
     cout<<"D ";
+    wall_up.rotate_right();
+ 
+    Color temp1, temp2, temp3;
+    temp1 = wall_front.dl;
+    temp2 = wall_front.dm;
+    temp3 = wall_front.dr;
+
+    wall_front.dl = wall_left.dl;
+    wall_front.dm = wall_left.dm;
+    wall_front.dr = wall_left.dr;
+ 
+    wall_left.dl = wall_back.dl;
+    wall_left.dm = wall_back.dm;
+    wall_left.dr = wall_back.dr;
+
+    wall_back.dl = wall_right.dl;
+    wall_back.dm = wall_right.dm;
+    wall_back.dr = wall_right.dr;
+
+    wall_right.dl = temp1;
+    wall_right.dm = temp2;
+    wall_right.dr = temp3;
     
 };
 
