@@ -30,6 +30,8 @@ int main() {
     // else cout<<"nouuu"<<endl;
 
     Cube mi;
+    mi.user_input_wall("front");
+    mi.print_cube();
 
     return 0;
 }

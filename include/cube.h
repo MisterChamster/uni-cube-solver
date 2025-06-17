@@ -79,7 +79,7 @@ public:
     // ============================ Methods - other ============================
     // =========================================================================
     void print_cube();
-    void input_wall(string wall_name);
+    void user_input_wall(string wall_name);
     bool is_solved();
     bool is_white_cross();
     bool is_white_layer();
