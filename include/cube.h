@@ -91,7 +91,8 @@ public:
     // =========================== Methods - solving ===========================
     // =========================================================================
 
-    //stuff
+    void white_layer_down();
+    void white_cross_edge(Color second_color);
 
 
 };

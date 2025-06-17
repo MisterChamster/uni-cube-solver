@@ -19,15 +19,6 @@ int main() {
     Wall w1(Color::white, Color::red,    Color::blue,
             Color::green, Color::yellow, Color::orange,
             Color::green, Color::yellow, Color::red);
-    // w1.print_wall();
-
-    // Wall w2(Color::white);
-    // w2.print_wall();
-
-    // if(w1.is_one_color()){
-    //     cout<<"tak"<<endl;
-    // }
-    // else cout<<"nouuu"<<endl;
 
     Cube mi;
     mi.user_input_wall("front");
@@ -37,6 +28,7 @@ int main() {
     mi.user_input_wall("down");
     mi.user_input_wall("back");
     mi.print_cube();
+    mi.white_layer_down();
 
     return 0;
 }
