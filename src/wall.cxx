@@ -3,7 +3,6 @@
 #include <iostream>
 
 
-
 Wall::Wall(Color tl, Color tm, Color tr,
            Color ml, Color mm, Color mr,
            Color dl, Color dm, Color dr) {

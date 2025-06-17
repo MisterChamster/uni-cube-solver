@@ -3,6 +3,7 @@
 
 #include "colors.h"
 
+
 class Wall {
 public:
     Color tl, tm, tr;

@@ -4,6 +4,7 @@
 #include "wall.h"
 #include "colors.h"
 
+
 class Cube{
 public:
     // ========================================================================
@@ -60,12 +61,12 @@ public:
     // void Bp();
 
     // ============= Cube moves =============
-    // void x();
+    void x();
     void y();
     void z();
     
     // ========= Reverse cube moves =========
-    // void xp();
+    void xp();
     void yp();
     void zp();
 
@@ -76,6 +77,9 @@ public:
     // =========================================================================
     void print_cube();
     bool is_solved();
+    bool is_white_cross();
+    bool is_white_layer();
+    bool is_second_layer();
 
 
 

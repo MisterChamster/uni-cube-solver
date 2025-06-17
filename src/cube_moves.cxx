@@ -5,10 +5,11 @@
 
 using namespace std;
 
+
 // ======================================
 // =============== Basic ================
 // ======================================
-void Cube::F(){
+void Cube::F() {
     cout<<"F ";
     wall_front.rotate_right();
 
@@ -34,7 +35,7 @@ void Cube::F(){
     wall_right.dl = temp3;
 
 };
-void Cube::R(){
+void Cube::R() {
     cout<<"R ";
     wall_right.rotate_right();
 
@@ -60,7 +61,7 @@ void Cube::R(){
     wall_back.dl = temp3;
     
 };
-void Cube::L(){
+void Cube::L() {
     cout<<"L ";
     wall_left.rotate_right();
  
@@ -86,8 +87,10 @@ void Cube::L(){
     wall_front.dl = temp3;
     
 };
-void Cube::U(){
+void Cube::U() {
     cout<<"U "; // fuck why "up" and not "top" ??????
+    // It's because it's a "U" move, not "T" move. 
+    // Why in hell would it be named "top"?? Wtf
     wall_up.rotate_right();
  
     Color temp1, temp2, temp3;
@@ -112,7 +115,7 @@ void Cube::U(){
     wall_left.tr = temp3;
     
 };
-void Cube::D(){
+void Cube::D() {
     cout<<"D ";
     wall_up.rotate_right();
  
@@ -146,19 +149,19 @@ void Cube::D(){
 // =====================================
 // ============== Reverse ==============
 // =====================================
-void Cube::Fp(){
+void Cube::Fp() {
     cout<<"Fp ";
 };
-void Cube::Rp(){
+void Cube::Rp() {
     cout<<"Rp ";
 };
-void Cube::Lp(){
+void Cube::Lp() {
     cout<<"Lp ";
 };
-void Cube::Up(){
+void Cube::Up() {
     cout<<"Up ";
 };
-void Cube::Dp(){
+void Cube::Dp() {
     cout<<"Dp ";
 };
 
@@ -169,12 +172,12 @@ void Cube::Dp(){
 // ======================================
 // ============= Cube moves =============
 // ======================================
-// void Cube::x(){};
+void Cube::x() {};
 
-void Cube::y(){
+void Cube::y() {
     cout<<"y ";
 };
-void Cube::z(){
+void Cube::z() {
     cout<<"z ";
 };
 
@@ -183,11 +186,11 @@ void Cube::z(){
 // ======================================
 // ========= Reverse cube moves =========
 // ======================================
-// void Cube::xp(){};
+void Cube::xp() {};
 
-void Cube::yp(){
+void Cube::yp() {
     cout<<"yp ";
 };
-void Cube::zp(){
+void Cube::zp() {
     cout<<"zp ";
 };

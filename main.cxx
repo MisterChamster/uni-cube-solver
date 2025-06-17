@@ -1,5 +1,6 @@
 // in /build
-// cmake .. -G "Unix Makefiles"
+// WINDOWS cmake .. -G "Unix Makefiles" 
+// OTHER cmake ..
 // make
 
 //useless imports in final program
@@ -11,6 +12,7 @@
 #include <iostream>
 
 using namespace std;
+
 
 int main() {
     cout<<"Helou cube!\n";

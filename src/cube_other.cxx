@@ -2,6 +2,7 @@
 #include "colors.h"
 #include "cube.h"
 #include <iostream>
+
 using namespace std;
 
 
@@ -21,5 +22,17 @@ void Cube::print_cube(){
 }
 
 bool Cube::is_solved(){
+    return false;
+}
+
+bool Cube::is_white_cross() {
+    return false;
+}
+
+bool Cube::is_white_layer() {
+    return false;
+}
+
+bool Cube::is_second_layer() {
     return false;
 }
