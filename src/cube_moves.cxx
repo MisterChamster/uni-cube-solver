@@ -284,10 +284,33 @@ void Cube::Dp() {
 // ======================================
 // ============= Cube moves =============
 // ======================================
-void Cube::x() {};
+void Cube::x() {
+    cout<<"x ";  
+    wall_right.rotate_right();
+    wall_left.rotate_left();
+
+    Wall temp = wall_up;
+    wall_up = wall_front;
+    wall_front = wall_down;
+
+    wall_back.rotate_2();
+    wall_down = wall_back;
+
+    temp.rotate_2();
+    wall_back = temp;
+};
 
 void Cube::y() {
     cout<<"y ";
+    wall_up.rotate_right();
+    wall_down.rotate_left();
+
+    Wall temp = wall_front;
+    wall_front = wall_right;
+    wall_right = wall_back;
+    wall_back = wall_left;
+    wall_left = temp;
+
 };
 void Cube::z() {
     cout<<"z ";
@@ -298,10 +321,35 @@ void Cube::z() {
 // ======================================
 // ========= Reverse cube moves =========
 // ======================================
-void Cube::xp() {};
+void Cube::xp() {
+    cout<<"xp ";  
+    wall_right.rotate_left();
+    wall_left.rotate_right();
+
+    Wall temp = wall_up;
+
+    wall_back.rotate_2();
+    wall_up = wall_back;
+    wall_back = wall_down;
+
+    wall_down.rotate_2();
+    wall_down = wall_front;
+    wall_front = temp;
+
+    //temp.rotate_2();
+};
 
 void Cube::yp() {
     cout<<"yp ";
+    wall_up.rotate_left();
+    wall_down.rotate_right();
+
+    Wall temu = wall_front;
+    wall_front = wall_left;
+    wall_left = wall_back;
+    wall_back = wall_right;
+    wall_right = temu;
+
 };
 void Cube::zp() {
     cout<<"zp ";
