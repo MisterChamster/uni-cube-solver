@@ -33,8 +33,8 @@ void Cube::F() {
     wall_right.tl = temp1;
     wall_right.ml = temp2;
     wall_right.dl = temp3;
-
 };
+
 void Cube::R() {
     cout<<"R ";
     wall_right.rotate_right();
@@ -59,8 +59,8 @@ void Cube::R() {
     wall_back.tr = temp1;
     wall_back.ml = temp2;
     wall_back.dl = temp3;
-    
 };
+
 void Cube::L() {
     cout<<"L ";
     wall_left.rotate_right();
@@ -85,8 +85,8 @@ void Cube::L() {
     wall_front.tl = temp1;
     wall_front.ml = temp2;
     wall_front.dl = temp3;
-    
 };
+
 void Cube::U() {
     cout<<"U "; // fuck why "up" and not "top" ??????
     // It's because it's a "U" move, not "T" move. 
@@ -114,8 +114,8 @@ void Cube::U() {
     wall_left.tl = temp1;
     wall_left.tm = temp2;
     wall_left.tr = temp3;
-    
 };
+
 void Cube::D() {
     cout<<"D ";
     wall_up.rotate_right();
@@ -140,7 +140,6 @@ void Cube::D() {
     wall_right.dl = temp1;
     wall_right.dm = temp2;
     wall_right.dr = temp3;
-    
 };
 
 // void Cube::B(){};
@@ -175,6 +174,7 @@ void Cube::Fp() {
     wall_left.mr = temp2;
     wall_left.tr = temp3;
 };
+
 void Cube::Rp() {
     cout<<"Rp ";//Rzeczpospolita Polska
     wall_right.rotate_left();
@@ -200,6 +200,7 @@ void Cube::Rp() {
     wall_front.mr = temp2;
     wall_front.tr = temp3;
 };
+
 void Cube::Lp() {
     cout<<"Lp ";
     wall_left.rotate_left();
@@ -225,6 +226,7 @@ void Cube::Lp() {
     wall_back.mr = temp2;
     wall_back.tr = temp3;
 };
+
 void Cube::Up() {
     cout<<"Up ";
     wall_up.rotate_left();
@@ -249,8 +251,8 @@ void Cube::Up() {
     wall_right.tl = temp1;
     wall_right.tm = temp2;
     wall_right.tr = temp3;
-    
 };
+
 void Cube::Dp() {
     cout<<"Dp ";
     wall_up.rotate_left();
@@ -310,10 +312,25 @@ void Cube::y() {
     wall_right = wall_back;
     wall_back = wall_left;
     wall_left = temp;
-
 };
+
 void Cube::z() {
     cout<<"z ";
+    wall_front.rotate_right();
+    wall_back.rotate_left();
+
+    Wall temp = wall_up;
+    wall_up = wall_left;
+    wall_up.rotate_right();
+
+    wall_left = wall_down;
+    wall_left.rotate_right();
+
+    wall_down = wall_right;
+    wall_down.rotate_right();
+
+    wall_right = temp;
+    wall_right.rotate_right();
 };
 
 
@@ -330,9 +347,10 @@ void Cube::xp() {
 
     wall_back.rotate_2();
     wall_up = wall_back;
-    wall_back = wall_down;
 
     wall_down.rotate_2();
+    wall_back = wall_down;
+
     wall_down = wall_front;
     wall_front = temp;
 
@@ -344,13 +362,28 @@ void Cube::yp() {
     wall_up.rotate_left();
     wall_down.rotate_right();
 
-    Wall temu = wall_front;
+    Wall temu = wall_front; //mu
     wall_front = wall_left;
     wall_left = wall_back;
     wall_back = wall_right;
     wall_right = temu;
-
 };
+
 void Cube::zp() {
     cout<<"zp ";
+    wall_front.rotate_left();
+    wall_back.rotate_right();
+
+    Wall temp = wall_up;
+    wall_up = wall_right;
+    wall_up.rotate_left();
+
+    wall_right = wall_down;
+    wall_right.rotate_left();
+
+    wall_down = wall_left;
+    wall_down.rotate_left();
+
+    wall_left = temp;
+    wall_left.rotate_left();
 };
