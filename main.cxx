@@ -31,6 +31,11 @@ int main() {
 
     Cube mi;
     mi.user_input_wall("front");
+    mi.user_input_wall("up");
+    mi.user_input_wall("right");
+    mi.user_input_wall("left");
+    mi.user_input_wall("down");
+    mi.user_input_wall("back");
     mi.print_cube();
 
     return 0;

@@ -32,14 +32,15 @@ void Cube::user_input_wall(string wall_name) {
     else if (wall_name == "back")  ptr_wall = &wall_back;
     
     while(true) {
-        cout<<"Input "<<wall_name<<" wall. Colors available: w b g r o y.\n>> ";
+        cout<<"Input "<<"\e[1m"<<wall_name<<"\e[0m"<<" wall. Colors available: w b g r o y.\n>> ";
         // cin>>user_input;
         getline(cin, user_input);
-        cout<<"\nUser input is: "<<user_input.length()<<endl;
+        // cout<<"\nUser input is: "<<user_input.length()<<endl;
         if(user_input.length() != 9+8 && user_input.length() != 9) {
-            cout<<"\nIncorrect input."<<endl;
+            cout<<"Incorrect input.\n"<<endl;
             continue;
         }
+        cout<<"\n";
 
         Color* square_ptrs[9];
         square_ptrs[0] = &(ptr_wall->tl);
