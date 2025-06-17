@@ -79,7 +79,7 @@ void Wall::rotate_2() {
 
 // Checks if the cube is one-color.
 // NEEDS IMPLEMENTING
-bool Wall::is_one_color(){
+bool Wall::is_one_color() {
     if(tl==tm && 
        tm==tr &&
        tr==ml &&
@@ -87,7 +87,7 @@ bool Wall::is_one_color(){
        mm==mr &&
        mr==dl &&
        dl==dm &&
-       dm==dr){
+       dm==dr) {
     return true;
     }
     else return false;

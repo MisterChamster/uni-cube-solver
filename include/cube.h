@@ -3,6 +3,9 @@
 
 #include "wall.h"
 #include "colors.h"
+#include <iostream>
+
+using namespace std;
 
 
 class Cube{
@@ -76,6 +79,7 @@ public:
     // ============================ Methods - other ============================
     // =========================================================================
     void print_cube();
+    void input_wall(string wall_name);
     bool is_solved();
     bool is_white_cross();
     bool is_white_layer();
