@@ -33,7 +33,7 @@ void Cube::F() {
     wall_right.tl = temp1;
     wall_right.ml = temp2;
     wall_right.dl = temp3;
-};
+}
 
 void Cube::R() {
     cout<<"R ";
@@ -59,7 +59,7 @@ void Cube::R() {
     wall_back.tr = temp1;
     wall_back.ml = temp2;
     wall_back.dl = temp3;
-};
+}
 
 void Cube::L() {
     cout<<"L ";
@@ -85,7 +85,7 @@ void Cube::L() {
     wall_front.tl = temp1;
     wall_front.ml = temp2;
     wall_front.dl = temp3;
-};
+}
 
 void Cube::U() {
     cout<<"U "; // fuck why "up" and not "top" ??????
@@ -114,11 +114,11 @@ void Cube::U() {
     wall_left.tl = temp1;
     wall_left.tm = temp2;
     wall_left.tr = temp3;
-};
+}
 
 void Cube::D() {
     cout<<"D ";
-    wall_up.rotate_right();
+    wall_down.rotate_right();
  
     Color temp1, temp2, temp3;
     temp1 = wall_front.dl;
@@ -140,9 +140,33 @@ void Cube::D() {
     wall_right.dl = temp1;
     wall_right.dm = temp2;
     wall_right.dr = temp3;
-};
+}
 
-// void Cube::B(){};
+void Cube::B(){
+    cout<<"B ";
+    wall_back.rotate_right();
+
+    Color temp1, temp2, temp3;
+    temp1 = wall_up.tl;
+    temp2 = wall_up.tm;
+    temp3 = wall_up.tr;
+
+    wall_up.tl = wall_right.tr;
+    wall_up.tm = wall_right.mr;
+    wall_up.tr = wall_right.dr;
+
+    wall_right.tr = wall_down.dr;
+    wall_right.mr = wall_down.dm;
+    wall_right.dr = wall_down.dl;
+
+    wall_down.dr = wall_left.dl;
+    wall_down.dm = wall_left.ml;
+    wall_down.dl = wall_left.tl;
+
+    wall_left.dl = temp1;
+    wall_left.ml = temp2;
+    wall_left.tl = temp3;
+}
 
 
 
@@ -173,7 +197,7 @@ void Cube::Fp() {
     wall_left.dr = temp1;
     wall_left.mr = temp2;
     wall_left.tr = temp3;
-};
+}
 
 void Cube::Rp() {
     cout<<"Rp ";//Rzeczpospolita Polska
@@ -199,7 +223,7 @@ void Cube::Rp() {
     wall_front.dr = temp1;
     wall_front.mr = temp2;
     wall_front.tr = temp3;
-};
+}
 
 void Cube::Lp() {
     cout<<"Lp ";
@@ -225,7 +249,7 @@ void Cube::Lp() {
     wall_back.dr = temp1;
     wall_back.mr = temp2;
     wall_back.tr = temp3;
-};
+}
 
 void Cube::Up() {
     cout<<"Up ";
@@ -251,11 +275,11 @@ void Cube::Up() {
     wall_right.tl = temp1;
     wall_right.tm = temp2;
     wall_right.tr = temp3;
-};
+}
 
 void Cube::Dp() {
     cout<<"Dp ";
-    wall_up.rotate_left();
+    wall_down.rotate_left();
  
     Color temp1, temp2, temp3;
     temp1 = wall_front.dl;
@@ -277,9 +301,33 @@ void Cube::Dp() {
     wall_left.dl = temp1;
     wall_left.dm = temp2;
     wall_left.dr = temp3;
-};
+}
 
-// void Cube::Bp(){};
+void Cube::Bp(){
+    cout<<"Bp ";
+    wall_back.rotate_left();
+
+    Color temp1, temp2, temp3;
+    temp1 = wall_up.tl;
+    temp2 = wall_up.tm;
+    temp3 = wall_up.tr;
+
+    wall_up.tl = wall_left.dl;
+    wall_up.tm = wall_left.ml;
+    wall_up.tr = wall_left.tl;
+
+    wall_left.dl = wall_down.dr;
+    wall_left.ml = wall_down.dm;
+    wall_left.tl = wall_down.dl;
+
+    wall_down.dr = wall_right.tr;
+    wall_down.dm = wall_right.mr;
+    wall_down.dl = wall_right.dr;
+
+    wall_right.tr = temp1;
+    wall_right.mr = temp2;
+    wall_right.dr = temp3;
+}
 
 
 
@@ -300,7 +348,7 @@ void Cube::x() {
 
     temp.rotate_2();
     wall_back = temp;
-};
+}
 
 void Cube::y() {
     cout<<"y ";
@@ -312,7 +360,7 @@ void Cube::y() {
     wall_right = wall_back;
     wall_back = wall_left;
     wall_left = temp;
-};
+}
 
 void Cube::z() {
     cout<<"z ";
@@ -331,7 +379,7 @@ void Cube::z() {
 
     wall_right = temp;
     wall_right.rotate_right();
-};
+}
 
 
 
@@ -355,7 +403,7 @@ void Cube::xp() {
     wall_front = temp;
 
     //temp.rotate_2();
-};
+}
 
 void Cube::yp() {
     cout<<"yp ";
@@ -367,7 +415,7 @@ void Cube::yp() {
     wall_left = wall_back;
     wall_back = wall_right;
     wall_right = temu;
-};
+}
 
 void Cube::zp() {
     cout<<"zp ";
@@ -386,7 +434,7 @@ void Cube::zp() {
 
     wall_left = temp;
     wall_left.rotate_left();
-};
+}
 
 
 
@@ -533,7 +581,33 @@ void Cube::D2() {
     }
 }
 
-// void Cube::B2() {}
+void Cube::B2() {
+    cout<<"B2 ";
+    for(int i=0; i<2; i++) {
+        wall_back.rotate_right();
+
+        Color temp1, temp2, temp3;
+        temp1 = wall_up.tl;
+        temp2 = wall_up.tm;
+        temp3 = wall_up.tr;
+
+        wall_up.tl = wall_right.tr;
+        wall_up.tm = wall_right.mr;
+        wall_up.tr = wall_right.dr;
+
+        wall_right.tr = wall_down.dr;
+        wall_right.mr = wall_down.dm;
+        wall_right.dr = wall_down.dl;
+
+        wall_down.dr = wall_left.dl;
+        wall_down.dm = wall_left.ml;
+        wall_down.dl = wall_left.tl;
+
+        wall_left.dl = temp1;
+        wall_left.ml = temp2;
+        wall_left.tl = temp3;
+    }
+}
 
 
 void Cube::x2() {
@@ -636,5 +710,5 @@ void Cube::f2l_reverse() {
 }
 
 void RURU() {
-    
+
 }
