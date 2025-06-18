@@ -104,6 +104,9 @@ public:
     // =========================================================================
 
     void white_layer_down();
+    void white_cross();
+
+// private:
     void white_cross_edge();
 
 

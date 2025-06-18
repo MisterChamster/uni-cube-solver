@@ -168,3 +168,13 @@ void Cube::white_cross_edge() {
         }
     }
 }
+
+void Cube::white_cross() {
+    white_cross_edge();
+    y();
+    white_cross_edge();
+    y();
+    white_cross_edge();
+    y();
+    white_cross_edge();
+}

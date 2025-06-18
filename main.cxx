@@ -27,8 +27,18 @@ int main() {
     mi.user_input_wall("left");
     mi.user_input_wall("down");
     mi.user_input_wall("back");
-    mi.print_cube();
+
     mi.white_layer_down();
+    mi.white_cross();
+    
+    mi.print_cube();
 
     return 0;
 }
+
+// bwgyyggyy
+// orbrbgoro
+// wwwyowobb
+// yywororor
+// wbgwgoygr
+// rbbbwgyrg
