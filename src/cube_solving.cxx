@@ -139,7 +139,32 @@ void Cube::white_cross_edge() {
                 R();
             }
 
+            // ========================================================
+            // ===================== Rest on back =====================
+            // ========================================================
+            else if(wall_back.mr == Color::white && wall_left.ml == front_color) {
+                L();
+                Up();
+                Lp();
+                F2();
+            }
+            else if(wall_back.ml == Color::white && wall_right.mr == front_color) {
+                Rp();
+                U();
+                R();
+                F2();
+            }
+
+            else if(wall_back.mr == front_color && wall_left.ml == Color::white) {
+                L2();
+                Fp();
+                L2();
+            }
+            else if(wall_back.ml == front_color && wall_right.mr == Color::white) {
+                R2();
+                F();
+                R2();
+            }
         }
     }
-    return;
 }
