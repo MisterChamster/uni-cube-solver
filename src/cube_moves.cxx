@@ -401,34 +401,50 @@ void Cube::zp() {
     }
 
     void Cube::R2() {
-
+        cout<<"R2 ";
+        R();
+        R();
     }
 
     void Cube::L2() {
-
+        cout<<"L2 ";
+        L();
+        L();
     }
     
     void Cube::U2() {
-
+        cout<<"U2 ";
+        U();
+        U();
     }
 
     void Cube::D2() {
-
+        cout<<"D2 ";
+        D();
+        D();
     }
 
     void Cube::B2() {
-
+        cout<<"B2 ";
+        B();
+        B();
     }
 
 
     void Cube::x2() {
-
+        cout<<"x2 ";
+        x();
+        x();
     }
 
     void Cube::y2() {
-
+        cout<<"y2 ";
+        y();
+        y();
     }
 
     void Cube::z2() {
-
+        cout<<"z2 ";
+        z();
+        z();
     }
