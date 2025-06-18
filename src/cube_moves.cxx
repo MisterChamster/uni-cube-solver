@@ -394,39 +394,41 @@ void Cube::zp() {
     // ============== 2-moves ==============
     // =====================================
 
-    void F2() {
+    void Cube::F2() {
+        cout<<"F2 ";
+        F();
+        F();
+    }
+
+    void Cube::R2() {
 
     }
 
-    void R2() {
-
-    }
-
-    void L2() {
+    void Cube::L2() {
 
     }
     
-    void U2() {
+    void Cube::U2() {
 
     }
 
-    void D2() {
+    void Cube::D2() {
 
     }
 
-    void B2() {
+    void Cube::B2() {
 
     }
 
 
-    void x2() {
+    void Cube::x2() {
 
     }
 
-    void y2() {
+    void Cube::y2() {
 
     }
 
-    void z2() {
+    void Cube::z2() {
 
     }
