@@ -53,7 +53,7 @@ public:
     void L();
     void U();
     void D();
-    // void B();
+    void B();
 
     // ============== Reverse ==============
     void Fp();
@@ -61,19 +61,29 @@ public:
     void Lp();
     void Up();
     void Dp();
-    // void Bp();
+    void Bp();
 
     // ============= Cube moves =============
     void x();
     void y();
     void z();
-    
+
     // ========= Reverse cube moves =========
     void xp();
     void yp();
     void zp();
 
     // ============== 2-moves ==============
+    void F2();
+    void R2();
+    void L2();
+    void U2();
+    void D2();
+    void B2();
+
+    void x2();
+    void y2();
+    void z2();
 
 
 

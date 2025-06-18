@@ -142,7 +142,7 @@ void Cube::D() {
     wall_right.dr = temp3;
 };
 
-// void Cube::B(){};
+void Cube::B(){};
 
 
 
@@ -279,7 +279,7 @@ void Cube::Dp() {
     wall_left.dr = temp3;
 };
 
-// void Cube::Bp(){};
+void Cube::Bp(){};
 
 
 
@@ -387,3 +387,46 @@ void Cube::zp() {
     wall_left = temp;
     wall_left.rotate_left();
 };
+
+
+
+    // =====================================
+    // ============== 2-moves ==============
+    // =====================================
+
+    void F2() {
+
+    }
+
+    void R2() {
+
+    }
+
+    void L2() {
+
+    }
+    
+    void U2() {
+
+    }
+
+    void D2() {
+
+    }
+
+    void B2() {
+
+    }
+
+
+    void x2() {
+
+    }
+
+    void y2() {
+
+    }
+
+    void z2() {
+
+    }
