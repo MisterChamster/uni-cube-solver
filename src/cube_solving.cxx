@@ -185,11 +185,11 @@ void Cube::white_layer_corner() {
     if(!is_white_cross()) return;
 
     Color front_color = wall_front.mm;
-    cout<<"Front color is: "<<front_color;
+    // cout<<"Front color is: "<<front_color;
     // If corner in the right place - return
     if(wall_front.dr == front_color && wall_down.tr == Color::white) return;
-    cout<<"Up dl: "<<wall_up.dl<<". Front tl: "<<wall_front.tl<<endl;
-    cout<<"Beginning my search.\n";
+    // cout<<"Up dl: "<<wall_up.dl<<". Front tl: "<<wall_front.tl<<endl;
+    // cout<<"Beginning my search.\n";
 
     // =========================================================
     // ================== White on front wall ==================
@@ -354,6 +354,81 @@ void Cube::solve_white_layer() {
 }
 
 void Cube::f2l_right_piece() {
+    if(!is_white_layer()) return;
+
+    Color front_color = wall_front.mm;
+    Color right_color = wall_right.mm;
+    //solved piece
+    if(wall_front.mr == front_color && wall_right.ml == right_color) return;
+    //evil mf
+    if(wall_front.mr == right_color && wall_right.ml == front_color) f2l_reverse();
+
+
+    // =========================================================
+    // =============== Front color on front wall ===============
+    // =========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+
+    // =========================================================
+    // =============== Right color on front wall ===============
+    // =========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+
+    // ========================================================
+    // ================ Front color on up wall ================
+    // ========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+    
+    // ========================================================
+    // ================ Right color on up wall ================
+    // ========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+
+    // ========================================================
+    // =============== Front color on back wall ===============
+    // ========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
+    
+    // ========================================================
+    // =============== Right color on back wall ===============
+    // ========================================================
+    // else if() {
+        
+    // }
+    // else if() {
+        
+    // }
 
 }
 

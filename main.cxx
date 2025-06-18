@@ -27,8 +27,8 @@ int main() {
 
     mi.white_layer_down();
     mi.solve_white_cross();
-    cout<<endl;
     mi.solve_white_layer();
+    cout<<endl;
 
     mi.print_cube();
 
