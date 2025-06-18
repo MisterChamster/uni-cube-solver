@@ -432,8 +432,18 @@ void Cube::f2l_right_piece() {
     else if(wall_back.ml == front_color && wall_right.mr == right_color) {
         y();
         f2l_right();
+
+        //Those two are equivalent, but manual is shorter in moves
+        // Up();
+        // f2l_right();
+
+        R();
         Up();
-        f2l_right();
+        Rp();
+        Up();
+        Fp();
+        U();
+        F();
     }
     
     // ========================================================
