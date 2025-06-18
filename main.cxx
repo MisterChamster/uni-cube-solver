@@ -27,7 +27,7 @@ int main() {
 
     mi.white_layer_down();
     mi.white_cross();
-    
+
     mi.print_cube();
 
     if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
