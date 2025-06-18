@@ -698,21 +698,60 @@ void Cube::corner_down_white_up_dr() {
 }
 
 void Cube::f2l_right() {
-
+    U();
+    R();
+    Up();
+    Rp();
+    Up();
+    Fp();
+    U();
+    F();
 }
 
 void Cube::f2l_left() {
-
+    Fp();
+    Lp();
+    F();
+    U();
+    F();
+    Up();
+    Fp();
+    L();
 }
 
 void Cube::f2l_left_from_right_layer() {
-    
+    Rp();
+    Fp();
+    R();
+    U();
+    R();
+    Up();
+    Rp();
+    F();
 }
 
 void Cube::f2l_reverse() {
+    Rp();
+    F();
+    R();
+    Fp();
 
+    R();
+    Up();
+    Rp();
+    U();
+    R();
+    Up();
+    Rp();
+    U2();
+    R();
+    Up();
+    Rp();
 }
 
-void RURU() {
-
+void Cube::RURU() {
+    R();
+    U();
+    Rp();
+    Up();
 }
