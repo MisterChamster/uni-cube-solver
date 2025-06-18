@@ -126,6 +126,41 @@ bool Cube::is_f2l() {
     return false;
 }
 
+bool Cube::is_yellow_cross() {
+    if(!is_f2l()) return false;
+
+    // If up layer edges are yellow...
+    if(wall_up.tm == Color::yellow &&
+       wall_up.mr == Color::yellow &&
+       wall_up.ml == Color::yellow &&
+       wall_up.dm == Color::yellow) {
+        // If edge pieces match wall colors...
+        if(wall_front.tm == wall_front.mm &&
+           wall_right.tm == wall_right.mm &&
+           // vvvvvvvv Free one to omit vvvvvvvv
+           // wall_left.tm  == wall_left.mm  &&
+           wall_back.tm  == wall_back.mm) return true;
+    }
+
+    return false;
+}
+
 bool Cube::is_solved(){
+    if(!is_yellow_cross()) return false;
+
+    // If up corners are yellow...
+    if(wall_up.tl == Color::yellow &&
+       wall_up.tr == Color::yellow &&
+       wall_up.dl == Color::yellow &&
+       wall_up.dr == Color::yellow){
+        // If corner pieces match wall colors...
+        // One color for each + 1 omit
+        if(wall_front.tr == wall_front.mm &&
+           wall_right.tr == wall_right.mm &&
+        //  vvvvvvvvvv Free one to omit vvvvvvvvvv
+        //    wall_left.tr  == wall_left.mm  &&
+           wall_back.tr  == wall_back.mm) return true;
+    }
+
     return false;
 }
