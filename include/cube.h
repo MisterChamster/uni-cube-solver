@@ -95,7 +95,7 @@ public:
     bool is_solved();
     bool is_white_cross();
     bool is_white_layer();
-    bool is_second_layer();
+    bool is_f2l();
 
 
 

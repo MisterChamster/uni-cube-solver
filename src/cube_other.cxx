@@ -69,18 +69,63 @@ void Cube::user_input_wall(string wall_name) {
     }
 }
 
-bool Cube::is_solved(){
-    return false;
-}
-
 bool Cube::is_white_cross() {
+    // If white is not on down layer
+    if(wall_down.mm != Color::white) return false;
+
+    // If down layer edges are white...
+    if(wall_down.tm == Color::white &&
+       wall_down.mr == Color::white &&
+       wall_down.ml == Color::white &&
+       wall_down.dm == Color::white) {
+        // If edge pieces match wall colors...
+        if(wall_front.dm == wall_front.mm &&
+           wall_right.dm == wall_right.mm &&
+           // Can just omit one compeletly for free
+           // wall_left.dm  == wall_left.mm  &&
+           wall_back.dm  == wall_back.mm) 
+            return true;
+    }
+
     return false;
 }
 
 bool Cube::is_white_layer() {
+    if(!is_white_cross()) return false;
+
+    // If down corners are white...
+    if(wall_down.tl == Color::white &&
+       wall_down.tr == Color::white &&
+       wall_down.dl == Color::white &&
+       wall_down.dr == Color::white) {
+        // If corner pieces match wall colors...
+        // Fuck. Gotta check just white and one other color, not all 3
+        //    wall_left.dl  == wall_left.mm  &&
+        //    wall_back.dl  == wall_back.mm  &&
+        //    wall_front.dl == wall_front.mm &&
+        //    wall_right.dl == wall_right.mm &&
+        if(wall_front.dr == wall_front.mm &&
+           wall_right.dr == wall_right.mm &&
+        //  vvvvvvvvvv Free one to omit vvvvvvvvvv
+        //    wall_left.dr  == wall_left.mm  &&
+           wall_back.dr  == wall_back.mm) return true;
+       }
+
     return false;
 }
 
-bool Cube::is_second_layer() {
+bool Cube::is_f2l() {
+    if(!is_white_layer()) return false;
+
+    if(wall_front.mr == wall_front.mm && wall_front.ml == wall_front.mm &&
+       wall_right.mr == wall_right.mm && wall_right.ml == wall_right.mm &&
+       wall_left.mr  == wall_left.mm  && wall_left.ml  == wall_left.mm  &&
+       wall_back.mr  == wall_back.mm  && wall_back.ml  == wall_back.mm) 
+        return true;
+
+    return false;
+}
+
+bool Cube::is_solved(){
     return false;
 }

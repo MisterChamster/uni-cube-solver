@@ -20,6 +20,8 @@ int main() {
             Color::green, Color::yellow, Color::orange,
             Color::green, Color::yellow, Color::red);
 
+    Cube solvd_qb;
+
     Cube mi;
     mi.user_input_wall("front");
     mi.user_input_wall("up");
@@ -32,6 +34,10 @@ int main() {
     mi.white_cross();
     
     mi.print_cube();
+
+    if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
 
     return 0;
 }
