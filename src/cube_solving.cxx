@@ -367,48 +367,57 @@ void Cube::f2l_right_piece() {
     // =========================================================
     // =============== Front color on front wall ===============
     // =========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_front.tm == front_color && wall_up.dm == right_color) {
+        f2l_right();
+    }
+    else if(wall_front.ml == front_color && wall_left.mr == right_color) {
+        f2l_left();
+        U();
+        f2l_right();
+    }
 
     // =========================================================
     // =============== Right color on front wall ===============
     // =========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_front.tm == right_color && wall_up.dm == front_color) {
+        Up();
+        f2l_left_from_right_layer();
+    }
+    else if(wall_front.ml == right_color && wall_left.mr == front_color) {
+        f2l_left();
+        f2l_left_from_right_layer();
+    }
 
     // ========================================================
     // ================ Front color on up wall ================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    
+    else if(wall_up.mr == front_color && wall_right.tm == right_color) {
+        f2l_left_from_right_layer();
+    }
+    else if(wall_up.tm == front_color && wall_back.tm == right_color) {
+        U();
+        f2l_left_from_right_layer();
+    }
+    else if(wall_up.ml == front_color && wall_left.tm == right_color) {
+        U2();
+        f2l_left_from_right_layer();
+    }
+
     // ========================================================
     // ================ Right color on up wall ================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_up.mr == right_color && wall_right.tm == front_color) {
+        U();
+        f2l_right();
+    }
+    else if(wall_up.tm == right_color && wall_back.tm == front_color) {
+        U2();
+        f2l_right();
+    }
+    else if(wall_up.ml == right_color && wall_left.tm == front_color) {
+        Up();
+        f2l_right();
+    }
 
     // ========================================================
     // =============== Front color on back wall ===============

@@ -705,6 +705,10 @@ void Cube::f2l_left() {
 
 }
 
+void Cube::f2l_left_from_right_layer() {
+    
+}
+
 void Cube::f2l_reverse() {
 
 }
