@@ -422,22 +422,36 @@ void Cube::f2l_right_piece() {
     // ========================================================
     // =============== Front color on back wall ===============
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_back.mr == front_color && wall_left.ml == right_color) {
+        y2();
+        f2l_right();
+        y2();
+        Up();
+        f2l_left_from_right_layer();
+    }
+    else if(wall_back.ml == front_color && wall_right.mr == right_color) {
+        y();
+        f2l_right();
+        Up();
+        f2l_right();
+    }
     
     // ========================================================
     // =============== Right color on back wall ===============
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_back.mr == right_color && wall_left.ml == front_color) {
+        y2();
+        f2l_right();
+        y2();
+        f2l_right();
+    }
+    else if(wall_back.ml == right_color && wall_right.mr == front_color) {
+        y();
+        f2l_right();
+        yp();
+        U2();
+        f2l_left_from_right_layer();
+    }
 
 }
 
