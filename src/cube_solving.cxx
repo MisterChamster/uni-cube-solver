@@ -137,7 +137,7 @@ void Cube::white_cross_edge() {
         R();
     }
 
-    
+
     // ========================================================
     // ===================== Rest on back =====================
     // ========================================================
@@ -185,8 +185,11 @@ void Cube::white_layer_corner() {
     if(!is_white_cross()) return;
 
     Color front_color = wall_front.mm;
+    cout<<"Front color is: "<<front_color;
     // If corner in the right place - return
     if(wall_front.dr == front_color && wall_down.tr == Color::white) return;
+    cout<<"Up dl: "<<wall_up.dl<<". Front tl: "<<wall_front.tl<<endl;
+    cout<<"Beginning my search.\n";
 
     // =========================================================
     // ================== White on front wall ==================
@@ -217,87 +220,135 @@ void Cube::white_layer_corner() {
     // ========================================================
     // =================== White on up wall ===================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_up.dr == Color::white && wall_right.tl == front_color) {
+        corner_down_white_up_dr();
+    }
+    else if(wall_up.tr == Color::white && wall_back.tl == front_color) {
+        U();
+        corner_down_white_up_dr();
+    }
+    else if(wall_up.tl == Color::white && wall_left.tl == front_color) {
+        U2();
+        corner_down_white_up_dr();
+    }
+    else if(wall_up.dl == Color::white && wall_front.tl == front_color) {
+        Up();
+        corner_down_white_up_dr();
+    }
 
 
     // =========================================================
     // ================== White on right wall ==================
     // =========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_right.dr == Color::white && wall_back.dl == front_color) {
+        Rp();
+        U2();
+        R();
+        Up();
+        corner_down_white_front_tr();
+    }
+    else if(wall_right.tr == Color::white && wall_up.tr == front_color) {
+        U();
+        corner_down_white_front_tr();
+    }
+    else if(wall_right.tl == Color::white && wall_front.tr == front_color) {
+        corner_down_white_right_tl();
+    }
+    else if(wall_right.dl == Color::white && wall_down.tr == front_color) {
+        R();
+        U();
+        Rp();
+        Up();
+        corner_down_white_right_tl();
+    }
 
 
     // ========================================================
     // ================== White on left wall ==================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_left.dr == Color::white && wall_front.dl == front_color) {
+        Lp();
+        Up();
+        L();
+        corner_down_white_front_tr();
+    }
+    else if(wall_left.tr == Color::white && wall_up.dl == front_color) {
+        Up();
+        corner_down_white_front_tr();
+    }
+    else if(wall_left.tl == Color::white && wall_back.tr == front_color) {
+        U2();
+        corner_down_white_right_tl();
+    }
+    else if(wall_left.dl == Color::white && wall_down.dl == front_color) {
+        L();
+        U2();
+        Lp();
+        corner_down_white_right_tl();
+    }
 
 
     // ========================================================
     // ================== White on down wall ==================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
+    else if(wall_down.dr == Color::white && wall_right.dr == front_color) {
+        B();
+        U2();
+        Bp();
+        Up();
+        corner_down_white_front_tr();
+    }
+    else if(wall_down.tl == Color::white && wall_left.dr == front_color) {
+        Lp();
+        Up();
+        L();
+        corner_down_white_right_tl();
+    }
+    else if(wall_down.dl == Color::white && wall_back.dl == front_color) {
+        L();
+        U2();
+        Lp();
+        corner_down_white_front_tr();
+    }
 
 
     // ========================================================
     // ================== White on back wall ==================
     // ========================================================
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-    // else if() {
-        
-    // }
-
-
+    else if(wall_back.dr == Color::white && wall_left.dl == front_color) {
+        Bp();
+        U2();
+        B();
+        corner_down_white_front_tr();
+    }
+    else if(wall_back.tr == Color::white && wall_up.tl == front_color) {
+        U2();
+        corner_down_white_front_tr();
+    }
+    else if(wall_back.tl == Color::white && wall_right.tr == front_color) {
+        U();
+        corner_down_white_right_tl();
+    }
+    else if(wall_back.dl == Color::white && wall_down.dr == front_color) {
+        B();
+        U();
+        Bp();
+        corner_down_white_right_tl();
+    }
+    cout<<"Search ended. Happy?\n";
 }
 
-void Cube::white_corners() {
-
+void Cube::white_layer() {
+    if(is_white_layer()) return;
+    white_layer_corner();
+    if(is_white_layer()) return;
+    y();
+    white_layer_corner();
+    if(is_white_layer()) return;
+    y();
+    white_layer_corner();
+    if(is_white_layer()) return;
+    y();
+    white_layer_corner();
+    cout<<endl;
 }

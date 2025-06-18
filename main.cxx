@@ -27,14 +27,16 @@ int main() {
 
     mi.white_layer_down();
     mi.white_cross();
+    cout<<endl;
+    mi.white_layer();
 
     mi.print_cube();
 
-    if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
 
     return 0;
 }
@@ -47,4 +49,4 @@ int main() {
 // ogwoggwgr
 // rgoobyybg
 // wobwwwbrg
-// gwbyowyyo
+// 

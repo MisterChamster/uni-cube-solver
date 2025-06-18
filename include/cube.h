@@ -122,11 +122,11 @@ public:
     // =========================================================================
 private:
     void white_cross_edge();
+    void white_layer_corner();
 
 public:
     void white_cross();
-    void white_layer_corner();
-    void white_corners();
+    void white_layer();
 
 
 
