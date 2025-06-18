@@ -106,11 +106,38 @@ void Cube::white_cross_edge() {
             // ========================================================
             // =================== White on up wall ===================
             // ========================================================
-
+            else if(wall_up.mr == Color::white && wall_right.tm == front_color) {
+                U();
+                F2();
+            }
+            else if(wall_up.ml == Color::white && wall_left.tm == front_color) {
+                Up();
+                F2();
+            }
+            else if(wall_up.tm == Color::white && wall_back.tm == front_color) {
+                U2();
+                F2();
+            }
 
             // ========================================================
             // ================= Front col on up wall =================
             // ========================================================
+            else if(wall_up.mr == front_color && wall_right.tm == Color::white) {
+                Rp();
+                F();
+                R();
+            }
+            else if(wall_up.ml == front_color && wall_left.tm == Color::white) {
+                L();
+                Fp();
+                Lp();
+            }
+            else if(wall_up.tm == front_color && wall_back.tm == Color::white) {
+                U();
+                Rp();
+                F();
+                R();
+            }
 
         }
     }
