@@ -36,9 +36,12 @@ int main() {
     return 0;
 }
 
-// bwgyyggyy
-// orbrbgoro
-// wwwyowobb
-// yywororor
-// wbgwgoygr
-// rbbbwgyrg
+
+// R y LP UP x RP F L xp U R U2 Fp Up
+
+// wrgbrboyr
+// yrroyrbby
+// ogwoggwgr
+// rgoobyybg
+// wobwwwbrg
+// gwbyowyyo

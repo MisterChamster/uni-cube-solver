@@ -105,8 +105,10 @@ public:
 
     void white_layer_down();
     void white_cross();
+    void white_layer_corner();
+    void white_corners();
 
-// private:
+private:
     void white_cross_edge();
 
 

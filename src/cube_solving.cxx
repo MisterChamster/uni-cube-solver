@@ -178,3 +178,11 @@ void Cube::white_cross() {
     y();
     white_cross_edge();
 }
+
+void Cube::white_layer_corner() {
+
+}
+
+void Cube::white_corners() {
+
+}
