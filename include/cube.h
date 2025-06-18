@@ -88,9 +88,15 @@ public:
     // =========== Move sequences ===========
 
     void white_layer_down();
+
     void corner_down_white_front_tr();
     void corner_down_white_up_dr();
     void corner_down_white_right_tl();
+
+    void f2l_right();
+    void f2l_left();
+    void f2l_reverse();
+    void RURU();
 
 
 

@@ -622,3 +622,19 @@ void Cube::corner_down_white_up_dr() {
     Up();
     corner_down_white_right_tl();
 }
+
+void Cube::f2l_right() {
+
+}
+
+void Cube::f2l_left() {
+
+}
+
+void Cube::f2l_reverse() {
+
+}
+
+void RURU() {
+    
+}
