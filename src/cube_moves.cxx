@@ -390,206 +390,235 @@ void Cube::zp() {
 
 
 
-    // =====================================
-    // ============== 2-moves ==============
-    // =====================================
+// =====================================
+// ============== 2-moves ==============
+// =====================================
+void Cube::F2() {
+    cout<<"F2 ";
+    for(int i=0; i<2; i++) {
+        wall_front.rotate_right();
 
-    void Cube::F2() {
-        cout<<"F2 ";
-        for(int i=0; i<2; i++) {
-            wall_front.rotate_right();
+        Color temp1, temp2, temp3;
+        temp1 = wall_up.dl;
+        temp2 = wall_up.dm;
+        temp3 = wall_up.dr;
 
-            Color temp1, temp2, temp3;
-            temp1 = wall_up.dl;
-            temp2 = wall_up.dm;
-            temp3 = wall_up.dr;
+        wall_up.dl = wall_left.dr;
+        wall_up.dm = wall_left.mr;
+        wall_up.dr = wall_left.tr;
 
-            wall_up.dl = wall_left.dr;
-            wall_up.dm = wall_left.mr;
-            wall_up.dr = wall_left.tr;
+        wall_left.dr = wall_down.tr;
+        wall_left.mr = wall_down.tm;
+        wall_left.tr = wall_down.tl;
 
-            wall_left.dr = wall_down.tr;
-            wall_left.mr = wall_down.tm;
-            wall_left.tr = wall_down.tl;
+        wall_down.tr = wall_right.tl;
+        wall_down.tm = wall_right.ml;
+        wall_down.tl = wall_right.dl;
 
-            wall_down.tr = wall_right.tl;
-            wall_down.tm = wall_right.ml;
-            wall_down.tl = wall_right.dl;
-
-            wall_right.tl = temp1;
-            wall_right.ml = temp2;
-            wall_right.dl = temp3;
-        }
+        wall_right.tl = temp1;
+        wall_right.ml = temp2;
+        wall_right.dl = temp3;
     }
+}
 
-    void Cube::R2() {
-        cout<<"R2 ";
-        for(int i=0; i<2; i++) {
-            wall_right.rotate_right();
+void Cube::R2() {
+    cout<<"R2 ";
+    for(int i=0; i<2; i++) {
+        wall_right.rotate_right();
 
-            Color temp1, temp2, temp3;
-            temp1 = wall_up.dr;
-            temp2 = wall_up.mr;
-            temp3 = wall_up.tr;
+        Color temp1, temp2, temp3;
+        temp1 = wall_up.dr;
+        temp2 = wall_up.mr;
+        temp3 = wall_up.tr;
+    
+        wall_up.dr = wall_front.dr;
+        wall_up.mr = wall_front.mr;
+        wall_up.tr = wall_front.tr;
+
+        wall_front.dr = wall_down.dr;
+        wall_front.mr = wall_down.mr;
+        wall_front.tr = wall_down.tr;
+
+        wall_down.dr = wall_back.tr;
+        wall_down.mr = wall_back.ml;
+        wall_down.tr = wall_back.dl;
+
+        wall_back.tr = temp1;
+        wall_back.ml = temp2;
+        wall_back.dl = temp3;
+    }
+}
+
+void Cube::L2() {
+    cout<<"L2 ";
+    for(int i=0; i<2; i++) {
+        wall_left.rotate_right();
+    
+        Color temp1, temp2, temp3;
+        temp1 = wall_up.tl;
+        temp2 = wall_up.ml;
+        temp3 = wall_up.dl;
+
+        wall_up.tl = wall_back.dr;
+        wall_up.ml = wall_back.mr;
+        wall_up.dl = wall_back.tr;
+
+        wall_back.dr = wall_down.tl;
+        wall_back.mr = wall_down.ml;
+        wall_back.tr = wall_down.dl;
         
-            wall_up.dr = wall_front.dr;
-            wall_up.mr = wall_front.mr;
-            wall_up.tr = wall_front.tr;
+        wall_down.tl = wall_front.tl;
+        wall_down.ml = wall_front.ml;
+        wall_down.dl = wall_front.dl;
 
-            wall_front.dr = wall_down.dr;
-            wall_front.mr = wall_down.mr;
-            wall_front.tr = wall_down.tr;
-
-            wall_down.dr = wall_back.tr;
-            wall_down.mr = wall_back.ml;
-            wall_down.tr = wall_back.dl;
-
-            wall_back.tr = temp1;
-            wall_back.ml = temp2;
-            wall_back.dl = temp3;
-        }
+        wall_front.tl = temp1;
+        wall_front.ml = temp2;
+        wall_front.dl = temp3;
     }
+}
 
-    void Cube::L2() {
-        cout<<"L2 ";
-        for(int i=0; i<2; i++) {
-            wall_left.rotate_right();
-        
-            Color temp1, temp2, temp3;
-            temp1 = wall_up.tl;
-            temp2 = wall_up.ml;
-            temp3 = wall_up.dl;
+void Cube::U2() {
+    cout<<"U2 ";
+    for(int i=0; i<2; i++) {
+        wall_up.rotate_right();
+    
+        Color temp1, temp2, temp3;
+        temp1 = wall_front.tl;
+        temp2 = wall_front.tm;
+        temp3 = wall_front.tr;
 
-            wall_up.tl = wall_back.dr;
-            wall_up.ml = wall_back.mr;
-            wall_up.dl = wall_back.tr;
+        wall_front.tl = wall_right.tl;
+        wall_front.tm = wall_right.tm;
+        wall_front.tr = wall_right.tr;
+    
+        wall_right.tl = wall_back.tl;
+        wall_right.tm = wall_back.tm;
+        wall_right.tr = wall_back.tr;
 
-            wall_back.dr = wall_down.tl;
-            wall_back.mr = wall_down.ml;
-            wall_back.tr = wall_down.dl;
-            
-            wall_down.tl = wall_front.tl;
-            wall_down.ml = wall_front.ml;
-            wall_down.dl = wall_front.dl;
+        wall_back.tl = wall_left.tl;
+        wall_back.tm = wall_left.tm;
+        wall_back.tr = wall_left.tr;
 
-            wall_front.tl = temp1;
-            wall_front.ml = temp2;
-            wall_front.dl = temp3;
-        }
+        wall_left.tl = temp1;
+        wall_left.tm = temp2;
+        wall_left.tr = temp3;
     }
+}
 
-    void Cube::U2() {
-        cout<<"U2 ";
-        for(int i=0; i<2; i++) {
-            wall_up.rotate_right();
-        
-            Color temp1, temp2, temp3;
-            temp1 = wall_front.tl;
-            temp2 = wall_front.tm;
-            temp3 = wall_front.tr;
+void Cube::D2() {
+    cout<<"D2 ";
+    for(int i=0; i<2; i++) {
+        wall_up.rotate_right();
+    
+        Color temp1, temp2, temp3;
+        temp1 = wall_front.dl;
+        temp2 = wall_front.dm;
+        temp3 = wall_front.dr;
 
-            wall_front.tl = wall_right.tl;
-            wall_front.tm = wall_right.tm;
-            wall_front.tr = wall_right.tr;
-        
-            wall_right.tl = wall_back.tl;
-            wall_right.tm = wall_back.tm;
-            wall_right.tr = wall_back.tr;
+        wall_front.dl = wall_left.dl;
+        wall_front.dm = wall_left.dm;
+        wall_front.dr = wall_left.dr;
+    
+        wall_left.dl = wall_back.dl;
+        wall_left.dm = wall_back.dm;
+        wall_left.dr = wall_back.dr;
 
-            wall_back.tl = wall_left.tl;
-            wall_back.tm = wall_left.tm;
-            wall_back.tr = wall_left.tr;
+        wall_back.dl = wall_right.dl;
+        wall_back.dm = wall_right.dm;
+        wall_back.dr = wall_right.dr;
 
-            wall_left.tl = temp1;
-            wall_left.tm = temp2;
-            wall_left.tr = temp3;
-        }
+        wall_right.dl = temp1;
+        wall_right.dm = temp2;
+        wall_right.dr = temp3;
     }
+}
 
-    void Cube::D2() {
-        cout<<"D2 ";
-        for(int i=0; i<2; i++) {
-            wall_up.rotate_right();
-        
-            Color temp1, temp2, temp3;
-            temp1 = wall_front.dl;
-            temp2 = wall_front.dm;
-            temp3 = wall_front.dr;
+// void Cube::B2() {}
 
-            wall_front.dl = wall_left.dl;
-            wall_front.dm = wall_left.dm;
-            wall_front.dr = wall_left.dr;
-        
-            wall_left.dl = wall_back.dl;
-            wall_left.dm = wall_back.dm;
-            wall_left.dr = wall_back.dr;
 
-            wall_back.dl = wall_right.dl;
-            wall_back.dm = wall_right.dm;
-            wall_back.dr = wall_right.dr;
+void Cube::x2() {
+    cout<<"x2 ";
+    for(int i=0; i<2; i++) {
+        wall_right.rotate_right();
+        wall_left.rotate_left();
 
-            wall_right.dl = temp1;
-            wall_right.dm = temp2;
-            wall_right.dr = temp3;
-        }
+        Wall temp = wall_up;
+        wall_up = wall_front;
+        wall_front = wall_down;
+
+        wall_back.rotate_2();
+        wall_down = wall_back;
+
+        temp.rotate_2();
+        wall_back = temp;
     }
+}
 
-    // void Cube::B2() {
-    //     cout<<"B2 ";
-    //     for(int i=0; i<2; i++) {
-    //     }
-    // }
+void Cube::y2() {
+    cout<<"y2 ";
+    for(int i=0; i<2; i++) {
+        wall_up.rotate_right();
+        wall_down.rotate_left();
 
-
-    void Cube::x2() {
-        cout<<"x2 ";
-        for(int i=0; i<2; i++) {
-            wall_right.rotate_right();
-            wall_left.rotate_left();
-
-            Wall temp = wall_up;
-            wall_up = wall_front;
-            wall_front = wall_down;
-
-            wall_back.rotate_2();
-            wall_down = wall_back;
-
-            temp.rotate_2();
-            wall_back = temp;
-        }
+        Wall temp = wall_front;
+        wall_front = wall_right;
+        wall_right = wall_back;
+        wall_back = wall_left;
+        wall_left = temp;
     }
+}
 
-    void Cube::y2() {
-        cout<<"y2 ";
-        for(int i=0; i<2; i++) {
-            wall_up.rotate_right();
-            wall_down.rotate_left();
+void Cube::z2() {
+    cout<<"z2 ";
+    for(int i=0; i<2; i++) {
+        wall_front.rotate_right();
+        wall_back.rotate_left();
 
-            Wall temp = wall_front;
-            wall_front = wall_right;
-            wall_right = wall_back;
-            wall_back = wall_left;
-            wall_left = temp;
-        }
+        Wall temp = wall_up;
+        wall_up = wall_left;
+        wall_up.rotate_right();
+
+        wall_left = wall_down;
+        wall_left.rotate_right();
+
+        wall_down = wall_right;
+        wall_down.rotate_right();
+
+        wall_right = temp;
+        wall_right.rotate_right();
     }
+}
 
-    void Cube::z2() {
-        cout<<"z2 ";
-        for(int i=0; i<2; i++) {
-            wall_front.rotate_right();
-            wall_back.rotate_left();
 
-            Wall temp = wall_up;
-            wall_up = wall_left;
-            wall_up.rotate_right();
 
-            wall_left = wall_down;
-            wall_left.rotate_right();
+// ======================================
+// =========== Move sequences ===========
+// ======================================
 
-            wall_down = wall_right;
-            wall_down.rotate_right();
+void Cube::white_layer_down() {
+    if     (wall_up.mm    == Color::white) {z(); z();}
+    else if(wall_front.mm == Color::white)  xp();
+    else if(wall_right.mm == Color::white)  z();
+    else if(wall_left.mm  == Color::white)  zp();
+    else if(wall_back.mm  == Color::white)  x();
+}
 
-            wall_right = temp;
-            wall_right.rotate_right();
-        }
-    }
+void Cube::corner_down_white_front_tr() {
+    Fp();
+    Up();
+    F();
+}
+
+void Cube::corner_down_white_right_tl() {
+    R();
+    U();
+    Rp();
+}
+
+void Cube::corner_down_white_up_dr() {
+    R();
+    U2();
+    Rp();
+    Up();
+    corner_down_white_right_tl();
+}

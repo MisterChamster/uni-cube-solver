@@ -85,6 +85,13 @@ public:
     void y2();
     void z2();
 
+    // =========== Move sequences ===========
+
+    void white_layer_down();
+    void corner_down_white_front_tr();
+    void corner_down_white_up_dr();
+    void corner_down_white_right_tl();
+
 
 
     // =========================================================================
@@ -111,7 +118,6 @@ private:
     void white_cross_edge();
 
 public:
-    void white_layer_down();
     void white_cross();
     void white_layer_corner();
     void white_corners();
