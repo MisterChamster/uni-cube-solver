@@ -13,6 +13,22 @@ void Cube::white_layer_down() {
     else if(wall_back.mm  == Color::white)  x();
 }
 
-void Cube::white_cross_edge(Color second_color) {
+//assuming white mm is on wall_down
+void Cube::white_cross_edge() {
+    //if white wall is on bottom
+    if(wall_down.mm == Color::white) {
+        Color front_color = wall_front.mm;
+        //if edge not in the right place
+        if(wall_down.tm != Color::white || wall_front.dm != front_color) {
+            //bad orientation
+            if (wall_down.tm == front_color || wall_front.dm == Color::white) {
+                Fp();
+                R();
+                U();
+                Rp();
+                //F2();
+            }
+        }
+    }
     return;
 }
