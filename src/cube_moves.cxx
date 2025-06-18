@@ -52,11 +52,11 @@ void Cube::R() {
     wall_front.mr = wall_down.mr;
     wall_front.tr = wall_down.tr;
 
-    wall_down.dr = wall_back.tr;
+    wall_down.dr = wall_back.tl;
     wall_down.mr = wall_back.ml;
     wall_down.tr = wall_back.dl;
 
-    wall_back.tr = temp1;
+    wall_back.tl = temp1;
     wall_back.ml = temp2;
     wall_back.dl = temp3;
 }
@@ -64,7 +64,7 @@ void Cube::R() {
 void Cube::L() {
     cout<<"L ";
     wall_left.rotate_right();
- 
+
     Color temp1, temp2, temp3;
     temp1 = wall_up.tl;
     temp2 = wall_up.ml;
@@ -77,7 +77,7 @@ void Cube::L() {
     wall_back.dr = wall_down.tl;
     wall_back.mr = wall_down.ml;
     wall_back.tr = wall_down.dl;
-    
+
     wall_down.tl = wall_front.tl;
     wall_down.ml = wall_front.ml;
     wall_down.dl = wall_front.dl;
@@ -208,11 +208,11 @@ void Cube::Rp() {
     temp2 = wall_up.mr;
     temp3 = wall_up.tr;
  
-    wall_up.dr = wall_back.tr;
+    wall_up.dr = wall_back.tl;
     wall_up.mr = wall_back.ml;
     wall_up.tr = wall_back.dl;
 
-    wall_back.tr = wall_down.dr;
+    wall_back.tl = wall_down.dr;
     wall_back.ml = wall_down.mr;
     wall_back.dl = wall_down.tr;
 
@@ -487,11 +487,11 @@ void Cube::R2() {
         wall_front.mr = wall_down.mr;
         wall_front.tr = wall_down.tr;
 
-        wall_down.dr = wall_back.tr;
+        wall_down.dr = wall_back.tl;
         wall_down.mr = wall_back.ml;
         wall_down.tr = wall_back.dl;
 
-        wall_back.tr = temp1;
+        wall_back.tl = temp1;
         wall_back.ml = temp2;
         wall_back.dl = temp3;
     }
