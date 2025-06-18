@@ -123,10 +123,12 @@ public:
 private:
     void white_cross_edge();
     void white_layer_corner();
+    void f2l_right_piece();
 
 public:
-    void white_cross();
-    void white_layer();
+    void solve_white_cross();
+    void solve_white_layer();
+    void solve_f2l();
 
 
 

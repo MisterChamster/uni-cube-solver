@@ -26,9 +26,9 @@ int main() {
     mi.user_input_all_walls();
 
     mi.white_layer_down();
-    mi.white_cross();
+    mi.solve_white_cross();
     cout<<endl;
-    mi.white_layer();
+    mi.solve_white_layer();
 
     mi.print_cube();
 

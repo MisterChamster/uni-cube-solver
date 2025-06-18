@@ -166,7 +166,7 @@ void Cube::white_cross_edge() {
     }
 }
 
-void Cube::white_cross() {
+void Cube::solve_white_cross() {
     if(is_white_cross()) return;
     white_cross_edge();
     if(is_white_cross()) return;
@@ -338,7 +338,7 @@ void Cube::white_layer_corner() {
     cout<<"Search ended. Happy?\n";
 }
 
-void Cube::white_layer() {
+void Cube::solve_white_layer() {
     if(is_white_layer()) return;
     white_layer_corner();
     if(is_white_layer()) return;
@@ -350,5 +350,24 @@ void Cube::white_layer() {
     if(is_white_layer()) return;
     y();
     white_layer_corner();
+    cout<<endl;
+}
+
+void Cube::f2l_right_piece() {
+
+}
+
+void Cube::solve_f2l() {
+    if(is_f2l()) return;
+    f2l_right_piece();
+    if(is_f2l()) return;
+    y();
+    f2l_right_piece();
+    if(is_f2l()) return;
+    y();
+    f2l_right_piece();
+    if(is_f2l()) return;
+    y();
+    f2l_right_piece();
     cout<<endl;
 }
