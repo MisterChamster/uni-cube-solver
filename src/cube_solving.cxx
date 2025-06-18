@@ -19,15 +19,33 @@ void Cube::white_cross_edge() {
     if(wall_down.mm == Color::white) {
         Color front_color = wall_front.mm;
         //if edge not in the right place
-        if(wall_down.tm != Color::white || wall_front.dm != front_color) {
+        if(wall_front.dm != front_color || wall_down.tm != Color::white) {
             //bad orientation
-            if (wall_down.tm == front_color || wall_front.dm == Color::white) {
+            if(wall_front.dm == Color::white && wall_down.tm == front_color) {
                 Fp();
                 R();
                 U();
                 Rp();
                 //F2();
             }
+
+            // =========================================================
+            // ================= Front col on front wall ===============
+            // =========================================================
+            else if(wall_front.mr == front_color && wall_right.ml == Color::white) {
+                F();
+            }
+            else if(wall_front.ml == front_color && wall_left.mr == Color::white) {
+                Fp();
+            }
+            else if(wall_front.tm == front_color && wall_up.dm == Color::white) {
+                // F2();
+            }
+
+            // =========================================================
+            // ================== White on front wall ==================
+            // =========================================================
+
         }
     }
     return;
