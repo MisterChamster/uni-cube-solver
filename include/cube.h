@@ -90,8 +90,12 @@ public:
     // =========================================================================
     // ============================ Methods - other ============================
     // =========================================================================
-    void print_cube();
+private:
     void user_input_wall(string wall_name);
+
+public:
+    void print_cube();
+    void user_input_all_walls();
     bool is_white_cross();
     bool is_white_layer();
     bool is_f2l();
@@ -103,14 +107,15 @@ public:
     // =========================================================================
     // =========================== Methods - solving ===========================
     // =========================================================================
+private:
+    void white_cross_edge();
 
+public:
     void white_layer_down();
     void white_cross();
     void white_layer_corner();
     void white_corners();
 
-private:
-    void white_cross_edge();
 
 
 };

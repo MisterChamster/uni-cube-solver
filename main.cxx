@@ -23,12 +23,7 @@ int main() {
     Cube solvd_qb;
 
     Cube mi;
-    mi.user_input_wall("front");
-    mi.user_input_wall("up");
-    mi.user_input_wall("right");
-    mi.user_input_wall("left");
-    mi.user_input_wall("down");
-    mi.user_input_wall("back");
+    mi.user_input_all_walls();
 
     mi.white_layer_down();
     mi.white_cross();

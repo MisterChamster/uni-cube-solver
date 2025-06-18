@@ -69,6 +69,15 @@ void Cube::user_input_wall(string wall_name) {
     }
 }
 
+void Cube::user_input_all_walls() {
+    user_input_wall("front");
+    user_input_wall("up");
+    user_input_wall("right");
+    user_input_wall("left");
+    user_input_wall("down");
+    user_input_wall("back");
+}
+
 bool Cube::is_white_cross() {
     // If white is not on down layer
     if(wall_down.mm != Color::white) return false;
