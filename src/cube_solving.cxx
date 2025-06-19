@@ -715,17 +715,9 @@ void Cube::solve_yellow_coners_placing() {
     if(is_yellow_corners_placed()) return;
 
     yellow_corners_placement_prepare_cube();
-
-    // if(!)
-
-
-
-    // int i = 0;
-    // while(true){
-
-
-    //     if(is_yellow_corners_oriented()) break;
-    //     i++;
-    //     if(i>1) break;
-    // }
+    yellow_corners_orient_sequence();
+    if(is_yellow_corners_placed()) return;
+    yellow_corners_orient_sequence();
+    if(is_yellow_corners_placed()) return;
+    else cout<<"cube_solving.cxx error: Orient sequence didn't orient properly after 2 tries. Idiot.";
 }
