@@ -640,6 +640,7 @@ void Cube::solve_yellow_cross_orientation() {
     // =========================================================
     else if(wall_back.tm == back_color && wall_left.tm == left_color) {
         y();
+        yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == back_color && wall_front.tm == left_color) {
         y();
@@ -660,6 +661,7 @@ void Cube::solve_yellow_cross_orientation() {
     // ========================================================
     else if(wall_left.tm == left_color && wall_front.tm == front_color) {
         y2();
+        yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == left_color && wall_right.tm == front_color) {
         y2();
@@ -679,6 +681,7 @@ void Cube::solve_yellow_cross_orientation() {
     // =========================================================
     else if(wall_front.tm == front_color && wall_right.tm == right_color) {
         yp();
+        yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == front_color && wall_back.tm == right_color) {
         yp();

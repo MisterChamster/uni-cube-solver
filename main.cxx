@@ -45,6 +45,7 @@ int main() {
     // if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
     // if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
     // if(solvd_qb.is_yellow_cross_oriented()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_yellow_corners_placed()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
     // if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
 
     return 0;
@@ -59,3 +60,13 @@ int main() {
 // rgoobyybg
 // wobwwwbrg
 // gwbyowyyo
+
+
+// U Rp x F Lp U F D L R B 
+
+// bgyowbbbo
+// oyobbgwog
+// rygwrwgrb
+// borwowrry
+// oyybgggyr
+// wrwrygyow
