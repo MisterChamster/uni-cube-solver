@@ -584,3 +584,11 @@ void Cube::solve_yellow_cross() {
         yellow_cross_1s();
     }
 }
+
+void Cube::yellow_orientation_prepare() {
+    
+}
+
+void Cube::solve_yellow_cross_orientation() {
+
+}

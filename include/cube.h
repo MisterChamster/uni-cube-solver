@@ -87,8 +87,7 @@ public:
 
     // =========== Move sequences ===========
 
-    void white_layer_down();
-
+private:
     void corner_down_white_front_tr();
     void corner_down_white_up_dr();
     void corner_down_white_right_tl();
@@ -103,6 +102,9 @@ public:
     void RURU2();
     void yellow_cross_1s();
     void yellow_cross_2s();
+
+public:
+    void white_layer_down();
 
 
 
@@ -131,12 +133,14 @@ private:
     void white_cross_edge();
     void white_layer_corner();
     void f2l_right_piece();
+    void yellow_orientation_prepare();
 
 public:
     void solve_white_cross();
     void solve_white_layer();
     void solve_f2l();
     void solve_yellow_cross();
+    void solve_yellow_cross_orientation();
 
 
 
