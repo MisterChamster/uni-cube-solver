@@ -140,7 +140,7 @@ private:
     void white_layer_corner();
     void f2l_right_piece();
     void yellow_corners_placement_prepare_cube();
-    void yellow_coners_orientation_prepare_cube(bool flag);
+    void yellow_corners_orientation_prepare_cube(bool &flag);
     void yellow_corners_algorithm();
 
 public:
@@ -150,8 +150,8 @@ public:
     void solve_f2l();
     void solve_yellow_cross();
     void solve_yellow_cross_orientation();
-    void solve_yellow_coners_placing();
-    void yellow_coners_orientation();
+    void solve_yellow_corners_placing();
+    void yellow_corners_orientation();
 
 
 

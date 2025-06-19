@@ -37,11 +37,11 @@ int main() {
     cout<<endl;
     mi.solve_yellow_cross_orientation();
     cout<<endl;
-    mi.solve_yellow_coners_placing();
+    mi.solve_yellow_corners_placing();
     cout<<endl;
     mi.z2();
     cout<<endl;
-    mi.yellow_coners_orientation();
+    mi.yellow_corners_orientation();
     cout<<endl;
 
     mi.print_cube();
