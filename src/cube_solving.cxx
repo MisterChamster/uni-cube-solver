@@ -618,40 +618,21 @@ void Cube::solve_yellow_cross_orientation() {
 
 
     // ========================================================
-    // ================= All horizontal lines =================
-    // ========================================================
-    if(wall_right.tm == right_color && wall_left.tm == left_color) {
-        yellow_cross_orient_sequence();
-        y();
-        yellow_cross_orient_sequence_no_Up();
-    }
-    else if(wall_right.tm == left_color && wall_left.tm == right_color) {
-        yellow_cross_orient_sequence();
-        yp();
-        yellow_cross_orient_sequence_U2();
-    }
-    else if(wall_right.tm == front_color && wall_left.tm == back_color) {
-        yellow_cross_orient_sequence();
-        yellow_cross_orient_sequence_U();
-    }
-    else if(wall_right.tm == back_color && wall_left.tm == front_color) {
-        yellow_cross_orient_sequence();
-        y2();
-    }
-
-
-    // ========================================================
     // ==================== Back and right ====================
     // ========================================================
-    else if(wall_back.tm == right_color && wall_left.tm == back_color) {
-        yellow_cross_orient_sequence_no_Up();
+    if(wall_back.tm == right_color && wall_left.tm == back_color) {
+        U();
+        yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
-        yellow_cross_orient_sequence_U();
+        U2();
+        yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == right_color && wall_right.tm == back_color) {
-        yellow_cross_orient_sequence_U2();
+        Up();
+        yellow_cross_orient_sequence();
     }
+
 
     // =========================================================
     // ===================== Left and back =====================
@@ -662,15 +643,18 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_left.tm == back_color && wall_front.tm == left_color) {
         y();
-        yellow_cross_orient_sequence_no_Up();
+        U();
+        yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == back_color && wall_right.tm == left_color) {
         y();
-        yellow_cross_orient_sequence_U();
+        U2();
+        yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == back_color && wall_back.tm == left_color) {
         y();
-        yellow_cross_orient_sequence_U2();
+        Up();
+        yellow_cross_orient_sequence();
     }
 
 
@@ -683,16 +667,20 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_front.tm == left_color && wall_right.tm == front_color) {
         y2();
-        yellow_cross_orient_sequence_no_Up();
+        U();
+        yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == left_color && wall_back.tm == front_color) {
         y2();
-        yellow_cross_orient_sequence_U();
+        U2();
+        yellow_cross_orient_sequence();
     }
     else if(wall_back.tm == left_color && wall_left.tm == front_color) {
         y2();
-        yellow_cross_orient_sequence_U2();
+        Up();
+        yellow_cross_orient_sequence();
     }
+
 
     // =========================================================
     // ==================== Right and front ====================
@@ -703,16 +691,46 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_right.tm == front_color && wall_back.tm == right_color) {
         yp();
-        yellow_cross_orient_sequence_no_Up();
+        U();
+        yellow_cross_orient_sequence();
     }
     else if(wall_back.tm == front_color && wall_left.tm == right_color) {
         yp();
-        yellow_cross_orient_sequence_U();
+        U2();
+        yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == front_color && wall_front.tm == right_color) {
         yp();
-        yellow_cross_orient_sequence_U2();
+        Up();
+        yellow_cross_orient_sequence();
     }
+
+
+    // ========================================================
+    // ================= All horizontal lines =================
+    // ========================================================
+    else if(wall_right.tm == right_color && wall_left.tm == left_color) {
+        yellow_cross_orient_sequence();
+        y();
+        U();
+        yellow_cross_orient_sequence();
+    }
+    else if(wall_right.tm == left_color && wall_left.tm == right_color) {
+        yellow_cross_orient_sequence();
+        yp();
+        Up();
+        yellow_cross_orient_sequence();
+    }
+    else if(wall_right.tm == front_color && wall_left.tm == back_color) {
+        yellow_cross_orient_sequence();
+        U2();
+        yellow_cross_orient_sequence();
+    }
+    else if(wall_right.tm == back_color && wall_left.tm == front_color) {
+        yellow_cross_orient_sequence();
+        y2();
+    }
+
     cout<<endl;
 }
 
