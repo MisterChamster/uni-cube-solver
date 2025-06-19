@@ -4,7 +4,7 @@
 #include <iostream>
 
 
-
+// White Layer Down
 void Cube::white_layer_down() {
     if     (wall_up.mm    == Color::white) {z(); z();}
     else if(wall_front.mm == Color::white)  xp();
@@ -13,6 +13,8 @@ void Cube::white_layer_down() {
     else if(wall_back.mm  == Color::white)  x();
 }
 
+
+// White Cross Edges
 void Cube::white_cross_edge() {
     Color front_color = wall_front.mm;
     // If edge in the right place - return
@@ -211,6 +213,8 @@ void Cube::solve_white_cross() {
     white_cross_edge();
 }
 
+
+// White Layer Corners
 void Cube::white_layer_corner() {
     Color front_color = wall_front.mm;
     // cout<<"Front color is: "<<front_color;
@@ -405,6 +409,8 @@ void Cube::solve_white_layer() {
     white_layer_corner();
 }
 
+
+// F2L
 void Cube::f2l_right_piece() {
     Color front_color = wall_front.mm;
     Color right_color = wall_right.mm;
@@ -543,6 +549,8 @@ void Cube::solve_f2l() {
     f2l_right_piece();
 }
 
+
+// Yellow Cross
 void Cube::solve_yellow_cross() {
     if(!is_f2l()) return;
     if(is_yellow_cross()) return;
@@ -594,6 +602,8 @@ void Cube::solve_yellow_cross() {
     cout<<endl;
 }
 
+
+// Yellow Cross Orientation
 void Cube::solve_yellow_cross_orientation() {
     if(!is_yellow_cross()) return;
     if(is_yellow_cross_oriented()) return;
@@ -706,6 +716,8 @@ void Cube::solve_yellow_cross_orientation() {
     cout<<endl;
 }
 
+
+// Yellow Corners Placement
 void Cube::yellow_corners_placement_prepare_cube() {
     // this if is dumb and has no use you cunt
     // if(is_yellow_corner_placed("dr")) {}
@@ -733,21 +745,23 @@ void Cube::solve_yellow_corners_placing() {
     else cout<<"\ncube_solving.cxx.solve_yellow_corners_placing() error: Orient sequence didn't orient properly after 2 tries. Idiot.\n";
 }
 
+
+// Yellow Corners Orientation
 void Cube::yellow_corners_orientation_prepare_cube(bool &flag) {
     Color down_color = wall_down.mm;
     if(wall_down.tr != down_color) {
         // cout<<"wall_down.tr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
-        cout<<"Returning\n";
+        // cout<<"Returning\n";
         return;
     }
     if(wall_down.dr != down_color) {
         // cout<<"wall_down.dr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
-        cout<<"Doing DP\n";
+        // cout<<"Doing DP\n";
         Dp();
     }
     else if(wall_down.dl != down_color) {
         // cout<<"wall_down.dl: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
-        cout<<"Doing D2\n";
+        // cout<<"Doing D2\n";
         D2();
     }
     else {
@@ -763,6 +777,18 @@ void Cube::yellow_corners_algorithm() {
     else cout<<"\ncube_solving.cxx.yellow_corners_algorithm() error: wall_front.dr corner should not be solved. Dumbass.\n";
 }
 
+void Cube::yellow_corners_orientation() {
+    //should be safer but idgaf
+    bool flagger = false;
+    for(int i=0; i<4; i++) {
+        yellow_corners_orientation_prepare_cube(flagger);
+        if(flagger == true) break;
+        yellow_corners_algorithm();
+    }
+    cout<<endl;
+}
+
+// Yellow Layer Orientation
 void Cube::orient_down_layer() {
     Color front_color = wall_front.mm;
     if(wall_right.dm == front_color) Dp();
@@ -770,18 +796,7 @@ void Cube::orient_down_layer() {
     else if(wall_left.dm == front_color) Dp();
 }
 
-//should be safer but idgaf
-void Cube::yellow_corners_orientation() {
-    bool flagger = false;
-    for(int i=0; i<4; i++) {
-        yellow_corners_orientation_prepare_cube(flagger);
-        if(flagger == true) break;
-        yellow_corners_algorithm();
-    }
-    orient_down_layer();
-    cout<<endl;
-}
-
+// Solving
 void Cube::solve() {
     user_input_all_walls();
 
@@ -803,5 +818,7 @@ void Cube::solve() {
     cout<<endl;
     yellow_corners_orientation();
     cout<<endl;
-    if(!is_solved()) cout<<"cube_solving.cxx.solve() error: Cube is not solved.";
+    orient_down_layer();
+    cout<<endl;
+    if(!is_solved()) cout<<"cube_solving.cxx.solve() error: Cube is not solved.\n";
 }
