@@ -734,7 +734,10 @@ void Cube::solve_yellow_coners_placing() {
 }
 
 void Cube::yellow_coners_orientation_prepare_cube() {
-
+    Color down_color = wall_down.mm;
+    if(wall_down.tr != down_color) return;
+    if(wall_down.dr != down_color) Dp();
+    else if(wall_down.dl != down_color) D2();
 }
 
 void Cube::yellow_coners_orientation() {
