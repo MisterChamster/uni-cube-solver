@@ -423,13 +423,7 @@ void Cube::f2l_right_piece() {
         // U();
         // f2l_right();
         U2();
-        R();
-        Up();
-        Rp();
-        Up();
-        Fp();
-        U();
-        F();
+        f2l_right_from_left_layer();
         cout<<endl;
     }
 
@@ -472,18 +466,17 @@ void Cube::f2l_right_piece() {
     // ================ Right color on up wall ================
     // ========================================================
     else if(wall_up.mr == right_color && wall_right.tm == front_color) {
-        U();
-        f2l_right();
+        U2();
+        f2l_right_from_left_layer();
         cout<<endl;
     }
     else if(wall_up.tm == right_color && wall_back.tm == front_color) {
-        U2();
-        f2l_right();
+        Up();
+        f2l_right_from_left_layer();
         cout<<endl;
     }
     else if(wall_up.ml == right_color && wall_left.tm == front_color) {
-        Up();
-        f2l_right();
+        f2l_right_from_left_layer();
         cout<<endl;
     }
 
@@ -502,18 +495,8 @@ void Cube::f2l_right_piece() {
     else if(wall_back.ml == front_color && wall_right.mr == right_color) {
         y();
         f2l_right();
-
-        //Those two are equivalent, but manual is shorter in moves
-        // Up();
-        // f2l_right();
-
-        R();
-        Up();
-        Rp();
-        Up();
-        Fp();
-        U();
-        F();
+        yp();
+        f2l_right_from_left_layer();
         cout<<endl;
     }
 

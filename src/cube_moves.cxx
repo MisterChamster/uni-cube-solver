@@ -719,6 +719,16 @@ void Cube::f2l_left() {
     L();
 }
 
+void Cube::f2l_right_from_left_layer() {
+    R();
+    Up();
+    Rp();
+    Up();
+    Fp();
+    U();
+    F();
+}
+
 void Cube::f2l_left_from_right_layer() {
     Rp();
     Fp();
@@ -727,16 +737,6 @@ void Cube::f2l_left_from_right_layer() {
     R();
     Up();
     Rp();
-    F();
-}
-
-void Cube::f2l_right_from_left_layer() {
-    R();
-    Up();
-    Rp();
-    Up();
-    Fp();
-    U();
     F();
 }
 
