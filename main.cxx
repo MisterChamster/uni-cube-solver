@@ -35,6 +35,8 @@ int main() {
     cout<<endl;
     mi.solve_yellow_cross();
     cout<<endl;
+    mi.solve_yellow_cross_orientation();
+    cout<<endl;
 
     mi.print_cube();
 

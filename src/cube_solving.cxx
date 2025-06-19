@@ -636,18 +636,65 @@ void Cube::yellow_orientation_prepare() {
     // =========================================================
     // ===================== Left and back =====================
     // =========================================================
+    else if(wall_back.tm == back_color && wall_left.tm == left_color) {
+        y();
+    }
+    else if(wall_left.tm == back_color && wall_front.tm == left_color) {
+        y();
+        U();
+    }
+    else if(wall_front.tm == back_color && wall_right.tm == left_color) {
+        y();
+        U2();
+    }
+    else if(wall_right.tm == back_color && wall_back.tm == left_color) {
+        y();
+        Up();
+    }
+
 
     // ========================================================
     // ==================== Front and left ====================
     // ========================================================
+    else if(wall_left.tm == left_color && wall_front.tm == front_color) {
+        y2();
+    }
+    else if(wall_front.tm == left_color && wall_right.tm == front_color) {
+        y2();
+        U();
+    }
+    else if(wall_right.tm == left_color && wall_back.tm == front_color) {
+        y2();
+        U2();
+    }
+    else if(wall_back.tm == left_color && wall_left.tm == front_color) {
+        y2();
+        Up();
+    }
 
     // =========================================================
     // ==================== Right and front ====================
     // =========================================================
-
+    else if(wall_front.tm == front_color && wall_right.tm == right_color) {
+        yp();
+    }
+    else if(wall_right.tm == front_color && wall_back.tm == right_color) {
+        yp();
+        U();
+    }
+    else if(wall_back.tm == front_color && wall_left.tm == right_color) {
+        yp();
+        U2();
+    }
+    else if(wall_left.tm == front_color && wall_front.tm == right_color) {
+        yp();
+        Up();
+    }
 }
 
 void Cube::solve_yellow_cross_orientation() {
     if(!is_yellow_cross()) return;
     yellow_orientation_prepare();
+    yellow_orient_sequence();
+    cout<<endl;
 }
