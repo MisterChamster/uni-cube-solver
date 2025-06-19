@@ -39,6 +39,8 @@ int main() {
     cout<<endl;
     mi.solve_yellow_coners_placing();
     cout<<endl;
+    mi.z2();
+    cout<<endl;
 
     mi.print_cube();
 
