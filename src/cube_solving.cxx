@@ -23,24 +23,28 @@ void Cube::white_cross_edge() {
         U();
         Rp();
         F2();
+        cout<<endl;
     }
     else if(wall_front.mr == Color::white && wall_right.ml == front_color) {
         R();
         U();
         Rp();
         F2();
+        cout<<endl;
     }
     else if(wall_front.ml == Color::white && wall_left.mr == front_color) {
         Lp();
         Up();
         L();
         F2();
+        cout<<endl;
     }
     else if(wall_front.tm == Color::white && wall_up.dm == front_color) {
         Up();
         Rp();
         F();
         R();
+        cout<<endl;
     }
 
 
@@ -49,12 +53,15 @@ void Cube::white_cross_edge() {
     // =========================================================
     else if(wall_front.mr == front_color && wall_right.ml == Color::white) {
         F();
+        cout<<endl;
     }
     else if(wall_front.ml == front_color && wall_left.mr == Color::white) {
         Fp();
+        cout<<endl;
     }
     else if(wall_front.tm == front_color && wall_up.dm == Color::white) {
         F2();
+        cout<<endl;
     }
 
 
@@ -66,18 +73,21 @@ void Cube::white_cross_edge() {
         D();
         Rp();
         Dp();
+        cout<<endl;
     }
     else if(wall_down.ml == Color::white && wall_left.dm == front_color) {
         L();
         Dp();
         Lp();
         D();
+        cout<<endl;
     }
     else if(wall_down.dm == Color::white && wall_back.dm == front_color) {
         D2();
         F();
         D2();
         Fp();
+        cout<<endl;
     }
 
 
@@ -87,16 +97,19 @@ void Cube::white_cross_edge() {
     else if(wall_down.mr == front_color && wall_right.dm == Color::white) {
         R();
         F();
+        cout<<endl;
     }
     else if(wall_down.ml == front_color && wall_left.dm == Color::white) {
         Lp();
         Fp();
+        cout<<endl;
     }
     else if(wall_down.dm == front_color && wall_back.dm == Color::white) {
         Dp();
         R();
         D();
         F();
+        cout<<endl;
     }
 
 
@@ -106,14 +119,17 @@ void Cube::white_cross_edge() {
     else if(wall_up.mr == Color::white && wall_right.tm == front_color) {
         U();
         F2();
+        cout<<endl;
     }
     else if(wall_up.ml == Color::white && wall_left.tm == front_color) {
         Up();
         F2();
+        cout<<endl;
     }
     else if(wall_up.tm == Color::white && wall_back.tm == front_color) {
         U2();
         F2();
+        cout<<endl;
     }
 
 
@@ -124,17 +140,20 @@ void Cube::white_cross_edge() {
         Rp();
         F();
         R();
+        cout<<endl;
     }
     else if(wall_up.ml == front_color && wall_left.tm == Color::white) {
         L();
         Fp();
         Lp();
+        cout<<endl;
     }
     else if(wall_up.tm == front_color && wall_back.tm == Color::white) {
         U();
         Rp();
         F();
         R();
+        cout<<endl;
     }
 
 
@@ -146,23 +165,27 @@ void Cube::white_cross_edge() {
         Up();
         Lp();
         F2();
+        cout<<endl;
     }
     else if(wall_back.ml == Color::white && wall_right.mr == front_color) {
         Rp();
         U();
         R();
         F2();
+        cout<<endl;
     }
 
     else if(wall_back.mr == front_color && wall_left.ml == Color::white) {
         L2();
         Fp();
         L2();
+        cout<<endl;
     }
     else if(wall_back.ml == front_color && wall_right.mr == Color::white) {
         R2();
         F();
         R2();
+        cout<<endl;
     }
 }
 
@@ -178,7 +201,6 @@ void Cube::solve_white_cross() {
     if(is_white_cross()) return;
     y();
     white_cross_edge();
-    cout<<endl;
 }
 
 void Cube::white_layer_corner() {
@@ -200,13 +222,16 @@ void Cube::white_layer_corner() {
         F();
         U();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_front.tr == Color::white && wall_up.dr == front_color) {
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_front.tl == Color::white && wall_left.tr == front_color) {
         Up();
         corner_down_white_right_tl();
+        cout<<endl;
     }
     else if(wall_front.dl == Color::white && wall_down.tl == front_color) {
         F();
@@ -214,6 +239,7 @@ void Cube::white_layer_corner() {
         Fp();
         U2();
         corner_down_white_right_tl();
+        cout<<endl;
     }
 
 
@@ -222,18 +248,22 @@ void Cube::white_layer_corner() {
     // ========================================================
     else if(wall_up.dr == Color::white && wall_right.tl == front_color) {
         corner_down_white_up_dr();
+        cout<<endl;
     }
     else if(wall_up.tr == Color::white && wall_back.tl == front_color) {
         U();
         corner_down_white_up_dr();
+        cout<<endl;
     }
     else if(wall_up.tl == Color::white && wall_left.tl == front_color) {
         U2();
         corner_down_white_up_dr();
+        cout<<endl;
     }
     else if(wall_up.dl == Color::white && wall_front.tl == front_color) {
         Up();
         corner_down_white_up_dr();
+        cout<<endl;
     }
 
 
@@ -246,13 +276,16 @@ void Cube::white_layer_corner() {
         R();
         Up();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_right.tr == Color::white && wall_up.tr == front_color) {
         U();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_right.tl == Color::white && wall_front.tr == front_color) {
         corner_down_white_right_tl();
+        cout<<endl;
     }
     else if(wall_right.dl == Color::white && wall_down.tr == front_color) {
         R();
@@ -260,6 +293,7 @@ void Cube::white_layer_corner() {
         Rp();
         Up();
         corner_down_white_right_tl();
+        cout<<endl;
     }
 
 
@@ -271,20 +305,24 @@ void Cube::white_layer_corner() {
         Up();
         L();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_left.tr == Color::white && wall_up.dl == front_color) {
         Up();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_left.tl == Color::white && wall_back.tr == front_color) {
         U2();
         corner_down_white_right_tl();
+        cout<<endl;
     }
     else if(wall_left.dl == Color::white && wall_down.dl == front_color) {
         L();
         U2();
         Lp();
         corner_down_white_right_tl();
+        cout<<endl;
     }
 
 
@@ -297,18 +335,21 @@ void Cube::white_layer_corner() {
         Bp();
         Up();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_down.tl == Color::white && wall_left.dr == front_color) {
         Lp();
         Up();
         L();
         corner_down_white_right_tl();
+        cout<<endl;
     }
     else if(wall_down.dl == Color::white && wall_back.dl == front_color) {
         L();
         U2();
         Lp();
         corner_down_white_front_tr();
+        cout<<endl;
     }
 
 
@@ -320,22 +361,26 @@ void Cube::white_layer_corner() {
         U2();
         B();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_back.tr == Color::white && wall_up.tl == front_color) {
         U2();
         corner_down_white_front_tr();
+        cout<<endl;
     }
     else if(wall_back.tl == Color::white && wall_right.tr == front_color) {
         U();
         corner_down_white_right_tl();
+        cout<<endl;
     }
     else if(wall_back.dl == Color::white && wall_down.dr == front_color) {
         B();
         U();
         Bp();
         corner_down_white_right_tl();
+        cout<<endl;
     }
-    cout<<"Search ended. Happy?\n";
+    // cout<<"Search ended. Happy?\n";
 }
 
 void Cube::solve_white_layer() {
@@ -350,7 +395,6 @@ void Cube::solve_white_layer() {
     if(is_white_layer()) return;
     y();
     white_layer_corner();
-    cout<<endl;
 }
 
 void Cube::f2l_right_piece() {
@@ -361,7 +405,10 @@ void Cube::f2l_right_piece() {
     //solved piece
     if(wall_front.mr == front_color && wall_right.ml == right_color) return;
     //evil mf
-    if(wall_front.mr == right_color && wall_right.ml == front_color) f2l_reverse();
+    if(wall_front.mr == right_color && wall_right.ml == front_color) {
+        f2l_reverse();
+        cout<<endl;
+    }
 
 
     // =========================================================
@@ -369,12 +416,15 @@ void Cube::f2l_right_piece() {
     // =========================================================
     else if(wall_front.tm == front_color && wall_up.dm == right_color) {
         f2l_right();
+        cout<<endl;
     }
     else if(wall_front.ml == front_color && wall_left.mr == right_color) {
         f2l_left();
         U();
         f2l_right();
+        cout<<endl;
     }
+
 
     // =========================================================
     // =============== Right color on front wall ===============
@@ -382,26 +432,33 @@ void Cube::f2l_right_piece() {
     else if(wall_front.tm == right_color && wall_up.dm == front_color) {
         Up();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
     else if(wall_front.ml == right_color && wall_left.mr == front_color) {
         f2l_left();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
+
 
     // ========================================================
     // ================ Front color on up wall ================
     // ========================================================
     else if(wall_up.mr == front_color && wall_right.tm == right_color) {
         f2l_left_from_right_layer();
+        cout<<endl;
     }
     else if(wall_up.tm == front_color && wall_back.tm == right_color) {
         U();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
     else if(wall_up.ml == front_color && wall_left.tm == right_color) {
         U2();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
+
 
     // ========================================================
     // ================ Right color on up wall ================
@@ -409,15 +466,19 @@ void Cube::f2l_right_piece() {
     else if(wall_up.mr == right_color && wall_right.tm == front_color) {
         U();
         f2l_right();
+        cout<<endl;
     }
     else if(wall_up.tm == right_color && wall_back.tm == front_color) {
         U2();
         f2l_right();
+        cout<<endl;
     }
     else if(wall_up.ml == right_color && wall_left.tm == front_color) {
         Up();
         f2l_right();
+        cout<<endl;
     }
+
 
     // ========================================================
     // =============== Front color on back wall ===============
@@ -428,6 +489,7 @@ void Cube::f2l_right_piece() {
         y2();
         Up();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
     else if(wall_back.ml == front_color && wall_right.mr == right_color) {
         y();
@@ -444,8 +506,10 @@ void Cube::f2l_right_piece() {
         Fp();
         U();
         F();
+        cout<<endl;
     }
-    
+
+
     // ========================================================
     // =============== Right color on back wall ===============
     // ========================================================
@@ -454,6 +518,7 @@ void Cube::f2l_right_piece() {
         f2l_right();
         y2();
         f2l_right();
+        cout<<endl;
     }
     else if(wall_back.ml == right_color && wall_right.mr == front_color) {
         y();
@@ -461,8 +526,8 @@ void Cube::f2l_right_piece() {
         yp();
         U2();
         f2l_left_from_right_layer();
+        cout<<endl;
     }
-
 }
 
 void Cube::solve_f2l() {
@@ -477,5 +542,4 @@ void Cube::solve_f2l() {
     if(is_f2l()) return;
     y();
     f2l_right_piece();
-    cout<<endl;
 }

@@ -26,8 +26,13 @@ int main() {
     mi.user_input_all_walls();
 
     mi.white_layer_down();
+    cout<<endl;
     mi.solve_white_cross();
+    cout<<endl;
     mi.solve_white_layer();
+    cout<<endl;
+    mi.solve_f2l();
+    cout<<endl;
     cout<<endl;
 
     mi.print_cube();
@@ -49,4 +54,4 @@ int main() {
 // ogwoggwgr
 // rgoobyybg
 // wobwwwbrg
-// 
+// gwbyowyyo
