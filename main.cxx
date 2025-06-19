@@ -20,29 +20,10 @@ int main() {
     //         Color::green, Color::yellow, Color::orange,
     //         Color::green, Color::yellow, Color::red);
 
-    Cube solvd_qb;
+    // Cube solvd_qb;
 
     Cube mi;
-    mi.user_input_all_walls();
-
-    mi.white_layer_down();
-    cout<<endl;
-    mi.solve_white_cross();
-    cout<<endl;
-    mi.solve_white_layer();
-    cout<<endl;
-    mi.solve_f2l();
-    cout<<endl;
-    mi.solve_yellow_cross();
-    cout<<endl;
-    mi.solve_yellow_cross_orientation();
-    cout<<endl;
-    mi.solve_yellow_corners_placing();
-    cout<<endl;
-    mi.z2();
-    cout<<endl;
-    mi.yellow_corners_orientation();
-    cout<<endl;
+    mi.solve();
 
     mi.print_cube();
 

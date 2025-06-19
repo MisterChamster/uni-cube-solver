@@ -153,8 +153,7 @@ public:
     void solve_yellow_cross_orientation();
     void solve_yellow_corners_placing();
     void yellow_corners_orientation();
-
-
+    void solve();
 
 };
 

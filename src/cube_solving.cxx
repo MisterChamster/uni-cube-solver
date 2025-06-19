@@ -780,3 +780,26 @@ void Cube::yellow_corners_orientation() {
     orient_down_layer();
     cout<<endl;
 }
+
+void Cube::solve() {
+    user_input_all_walls();
+
+    white_layer_down();
+    cout<<endl;
+    solve_white_cross();
+    cout<<endl;
+    solve_white_layer();
+    cout<<endl;
+    solve_f2l();
+    cout<<endl;
+    solve_yellow_cross();
+    cout<<endl;
+    solve_yellow_cross_orientation();
+    cout<<endl;
+    solve_yellow_corners_placing();
+    cout<<endl;
+    z2();
+    cout<<endl;
+    yellow_corners_orientation();
+    cout<<endl;
+}
