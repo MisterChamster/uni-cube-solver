@@ -556,7 +556,7 @@ void Cube::U2() {
 void Cube::D2() {
     cout<<"D2 ";
     for(int i=0; i<2; i++) {
-        wall_up.rotate_right();
+        wall_down.rotate_right();
     
         Color temp1, temp2, temp3;
         temp1 = wall_front.dl;
