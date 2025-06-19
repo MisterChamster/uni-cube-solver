@@ -142,6 +142,7 @@ private:
     void white_cross_edge();
     void white_layer_corner();
     void f2l_right_piece();
+    void yellow_orientation_prepare_cube();
 
 public:
     void solve_white_cross();
