@@ -6,9 +6,6 @@
 
 
 void Cube::white_cross_edge() {
-    // If white mm is not on bottom - return
-    if(wall_down.mm != Color::white) return;
-
     Color front_color = wall_front.mm;
     // If edge in the right place - return
     if(wall_front.dm == front_color && wall_down.tm == Color::white) return;
@@ -190,6 +187,9 @@ void Cube::white_cross_edge() {
 }
 
 void Cube::solve_white_cross() {
+    // If white mm is not on bottom - return
+    if(wall_down.mm != Color::white) return;
+
     if(is_white_cross()) return;
     white_cross_edge();
     if(is_white_cross()) return;
@@ -204,8 +204,6 @@ void Cube::solve_white_cross() {
 }
 
 void Cube::white_layer_corner() {
-    if(!is_white_cross()) return;
-
     Color front_color = wall_front.mm;
     // cout<<"Front color is: "<<front_color;
     // If corner in the right place - return
@@ -384,6 +382,8 @@ void Cube::white_layer_corner() {
 }
 
 void Cube::solve_white_layer() {
+    if(!is_white_cross()) return;
+
     if(is_white_layer()) return;
     white_layer_corner();
     if(is_white_layer()) return;
@@ -398,8 +398,6 @@ void Cube::solve_white_layer() {
 }
 
 void Cube::f2l_right_piece() {
-    if(!is_white_layer()) return;
-
     Color front_color = wall_front.mm;
     Color right_color = wall_right.mm;
     //solved piece
@@ -522,6 +520,8 @@ void Cube::f2l_right_piece() {
 }
 
 void Cube::solve_f2l() {
+    if(!is_white_layer()) return;
+
     if(is_f2l()) return;
     f2l_right_piece();
     if(is_f2l()) return;
@@ -586,9 +586,16 @@ void Cube::solve_yellow_cross() {
 }
 
 void Cube::yellow_orientation_prepare() {
-    
+    if(is_yellow_cross_oriented) return;
+
+    Color front_color = wall_front.mm;
+    Color right_color = wall_right.mm;
+    Color left_color  = wall_left.mm;
+    Color back_color  = wall_back.mm;
+
 }
 
 void Cube::solve_yellow_cross_orientation() {
-
+    if(!is_yellow_cross()) return;
+    yellow_orientation_prepare();
 }
