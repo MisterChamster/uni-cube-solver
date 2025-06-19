@@ -758,13 +758,8 @@ void Cube::yellow_corners_orientation_prepare_cube(bool &flag) {
 
 void Cube::yellow_corners_algorithm() {
     Color down_color = wall_down.mm;
-    if(wall_front.dr == down_color) {
-        RURU2(); 
-        RURU2();
-    }
-    else if(wall_right.dl == down_color) {
-        RURU2();
-    }
+    if(wall_front.dr == down_color) {RURU2(); RURU2();}
+    else if(wall_right.dl == down_color) RURU2();
     else cout<<"\ncube_solving.cxx.yellow_corners_algorithm() error: wall_front.dr corner should not be solved. Dumbass.\n";
 }
 
@@ -775,5 +770,11 @@ void Cube::yellow_corners_orientation() {
         if(flagger == true) break;
         yellow_corners_algorithm();
     }
+}
 
+void Cube::orient_down_layer() {
+    Color front_color = wall_front.mm;
+    if(wall_right.dm == front_color) Dp();
+    else if(wall_back.dm == front_color) D2();
+    else if(wall_left.dm == front_color) Dp();
 }

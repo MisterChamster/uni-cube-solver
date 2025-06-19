@@ -142,6 +142,7 @@ private:
     void yellow_corners_placement_prepare_cube();
     void yellow_corners_orientation_prepare_cube(bool &flag);
     void yellow_corners_algorithm();
+    void orient_down_layer();
 
 public:
     void white_layer_down();
