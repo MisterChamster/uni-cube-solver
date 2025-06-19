@@ -586,7 +586,7 @@ void Cube::solve_yellow_cross() {
 }
 
 void Cube::yellow_orientation_prepare() {
-    if(is_yellow_cross_oriented) return;
+    if(is_yellow_cross_oriented()) return;
 
     Color front_color = wall_front.mm;
     Color right_color = wall_right.mm;
@@ -600,10 +600,34 @@ void Cube::yellow_orientation_prepare() {
     // ========================================================
     // ================= All horizontal lines =================
     // ========================================================
+    if(wall_right.tm == right_color && wall_left.tm == left_color) {
+        
+    }
+    else if(wall_right.tm == left_color && wall_left.tm == right_color) {
+        
+    }
+    else if(wall_right.tm == front_color && wall_left.tm == back_color) {
+        
+    }
+    else if(wall_right.tm == back_color && wall_left.tm == front_color) {
+        
+    }
 
     // ========================================================
     // ================== All vertical lines ==================
     // ========================================================
+    else if(wall_front.tm == right_color && wall_back.tm == left_color) {
+        
+    }
+    else if(wall_front.tm == left_color && wall_back.tm == right_color) {
+        
+    }
+    else if(wall_front.tm == front_color && wall_back.tm == back_color) {
+        
+    }
+    else if(wall_front.tm == back_color && wall_back.tm == front_color) {
+        
+    }
 
     // ========================================================
     // ==================== Back and right ====================

@@ -782,3 +782,24 @@ void Cube::yellow_cross_2s() {
     RURU2();
     Fp();
 }
+
+void Cube::yellow_orient_sequence() {
+    Up();
+    R();
+    U2();
+    Rp();
+    Up();
+    R();
+    Up();
+    Rp();
+}
+
+void Cube::yellow_orient_sequence_no_Up() {
+    R();
+    U2();
+    Rp();
+    Up();
+    R();
+    Up();
+    Rp();
+}
