@@ -33,22 +33,23 @@ int main() {
     cout<<endl;
     mi.solve_f2l();
     cout<<endl;
+    mi.solve_yellow_cross();
     cout<<endl;
 
     mi.print_cube();
 
-    if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_yellow_cross_oriented()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_yellow_cross_oriented()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
+    // if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
 
     return 0;
 }
 
 
-// R y LP UP x RP F L xp U R U2 Fp Up
+// R y Lp Up x Rp F L xp U R U2 Fp Up
 
 // wrgbrboyr
 // yrroyrbby
