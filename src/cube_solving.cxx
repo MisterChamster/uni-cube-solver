@@ -583,9 +583,11 @@ void Cube::solve_yellow_cross() {
         U();
         yellow_cross_1s();
     }
+    cout<<endl;
 }
 
-void Cube::yellow_orientation_prepare() {
+void Cube::solve_yellow_cross_orientation() {
+    if(!is_yellow_cross()) return;
     if(is_yellow_cross_oriented()) return;
 
     Color front_color = wall_front.mm;
@@ -608,11 +610,11 @@ void Cube::yellow_orientation_prepare() {
     else if(wall_right.tm == left_color && wall_left.tm == right_color) {
         yellow_orient_sequence();
         yp();
-        Up();
+        yellow_orient_sequence_U2();
     }
     else if(wall_right.tm == front_color && wall_left.tm == back_color) {
         yellow_orient_sequence();
-        U2();
+        yellow_orient_sequence_U();
     }
     else if(wall_right.tm == back_color && wall_left.tm == front_color) {
         yellow_orient_sequence();
@@ -627,10 +629,10 @@ void Cube::yellow_orientation_prepare() {
         yellow_orient_sequence_no_Up();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
-        U2();
+        yellow_orient_sequence_U();
     }
     else if(wall_front.tm == right_color && wall_right.tm == back_color) {
-        Up();
+        yellow_orient_sequence_U2();
     }
 
     // =========================================================
@@ -645,11 +647,11 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_front.tm == back_color && wall_right.tm == left_color) {
         y();
-        U2();
+        yellow_orient_sequence_U();
     }
     else if(wall_right.tm == back_color && wall_back.tm == left_color) {
         y();
-        Up();
+        yellow_orient_sequence_U2();
     }
 
 
@@ -665,11 +667,11 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_right.tm == left_color && wall_back.tm == front_color) {
         y2();
-        U2();
+        yellow_orient_sequence_U();
     }
     else if(wall_back.tm == left_color && wall_left.tm == front_color) {
         y2();
-        Up();
+        yellow_orient_sequence_U2();
     }
 
     // =========================================================
@@ -684,17 +686,11 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_back.tm == front_color && wall_left.tm == right_color) {
         yp();
-        U2();
+        yellow_orient_sequence_U();
     }
     else if(wall_left.tm == front_color && wall_front.tm == right_color) {
         yp();
-        Up();
+        yellow_orient_sequence_U2();
     }
-}
-
-void Cube::solve_yellow_cross_orientation() {
-    if(!is_yellow_cross()) return;
-    yellow_orientation_prepare();
-    yellow_orient_sequence();
     cout<<endl;
 }

@@ -138,7 +138,7 @@ private:
     void white_cross_edge();
     void white_layer_corner();
     void f2l_right_piece();
-    void yellow_orientation_prepare();
+    // void yellow_orientation_prepare();
 
 public:
     void solve_white_cross();
