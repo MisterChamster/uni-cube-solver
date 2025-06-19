@@ -160,7 +160,7 @@ bool Cube::is_yellow_cross_oriented() {
     return false;
 }
 
-bool Cube::is_yellow_corner_oriented(string up_corner) {
+bool Cube::is_yellow_corner_placed(string up_corner) {
     if(!is_yellow_cross_oriented()) return false;
 
     Color front_color = wall_front.mm;
@@ -193,17 +193,17 @@ bool Cube::is_yellow_corner_oriented(string up_corner) {
     return false;
 }
 
-bool Cube::is_yellow_corners_oriented() {
-    if(!is_yellow_corner_oriented("dr")) return false;
-    if(!is_yellow_corner_oriented("tr")) return false;
-    if(!is_yellow_corner_oriented("tl")) return false;
-    if(!is_yellow_corner_oriented("dl")) return false;
+bool Cube::is_yellow_corners_placed() {
+    if(!is_yellow_corner_placed("dr")) return false;
+    if(!is_yellow_corner_placed("tr")) return false;
+    if(!is_yellow_corner_placed("tl")) return false;
+    if(!is_yellow_corner_placed("dl")) return false;
 
     return true;
 }
 
 bool Cube::is_solved(){
-    if(!is_yellow_corners_oriented()) return false;
+    if(!is_yellow_corners_placed()) return false;
 
     // If up corners are yellow...
     if(wall_up.tl == Color::yellow &&

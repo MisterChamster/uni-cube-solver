@@ -695,26 +695,28 @@ void Cube::solve_yellow_cross_orientation() {
     cout<<endl;
 }
 
-void Cube::yellow_orientation_prepare_cube() {
+void Cube::yellow_corners_placement_prepare_cube() {
     // this if is dumb and has no use you cunt
-    // if(is_yellow_corner_oriented("dr")) {}
+    // if(is_yellow_corner_placed("dr")) {}
     
-    if(is_yellow_corner_oriented("tr")) {
+    if(is_yellow_corner_placed("tr")) {
         y();
     }
-    else if(is_yellow_corner_oriented("tl")) {
+    else if(is_yellow_corner_placed("tl")) {
         y2();
     }
-    else if(is_yellow_corner_oriented("dl")) {
+    else if(is_yellow_corner_placed("dl")) {
         yp();
     }
 }
 
-void Cube::solve_yellow_coners_orientation() {
+void Cube::solve_yellow_coners_placing() {
     if(!is_yellow_cross_oriented()) return;
-    if(is_yellow_corners_oriented()) return;
+    if(is_yellow_corners_placed()) return;
 
-    yellow_orientation_prepare_cube();
+    yellow_corners_placement_prepare_cube();
+
+    // if(!)
 
 
 
