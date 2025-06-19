@@ -770,6 +770,7 @@ void Cube::orient_down_layer() {
     else if(wall_left.dm == front_color) Dp();
 }
 
+//should be safer but idgaf
 void Cube::yellow_corners_orientation() {
     bool flagger = false;
     for(int i=0; i<4; i++) {
