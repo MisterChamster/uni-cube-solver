@@ -103,10 +103,12 @@ private:
     void yellow_cross_1s();
     void yellow_cross_2s();
 
-    void yellow_orient_sequence();
-    void yellow_orient_sequence_no_Up();
-    void yellow_orient_sequence_U2();
-    void yellow_orient_sequence_U();
+    void yellow_cross_orient_sequence();
+    void yellow_cross_orient_sequence_no_Up();
+    void yellow_cross_orient_sequence_U2();
+    void yellow_cross_orient_sequence_U();
+
+    // void yellow_corners_orient_sequence();
 
 public:
     void white_layer_down();

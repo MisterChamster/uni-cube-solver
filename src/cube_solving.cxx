@@ -603,21 +603,21 @@ void Cube::solve_yellow_cross_orientation() {
     // ================= All horizontal lines =================
     // ========================================================
     if(wall_right.tm == right_color && wall_left.tm == left_color) {
-        yellow_orient_sequence();
+        yellow_cross_orient_sequence();
         y();
-        yellow_orient_sequence_no_Up();
+        yellow_cross_orient_sequence_no_Up();
     }
     else if(wall_right.tm == left_color && wall_left.tm == right_color) {
-        yellow_orient_sequence();
+        yellow_cross_orient_sequence();
         yp();
-        yellow_orient_sequence_U2();
+        yellow_cross_orient_sequence_U2();
     }
     else if(wall_right.tm == front_color && wall_left.tm == back_color) {
-        yellow_orient_sequence();
-        yellow_orient_sequence_U();
+        yellow_cross_orient_sequence();
+        yellow_cross_orient_sequence_U();
     }
     else if(wall_right.tm == back_color && wall_left.tm == front_color) {
-        yellow_orient_sequence();
+        yellow_cross_orient_sequence();
         y2();
     }
 
@@ -626,13 +626,13 @@ void Cube::solve_yellow_cross_orientation() {
     // ==================== Back and right ====================
     // ========================================================
     else if(wall_back.tm == right_color && wall_left.tm == back_color) {
-        yellow_orient_sequence_no_Up();
+        yellow_cross_orient_sequence_no_Up();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
-        yellow_orient_sequence_U();
+        yellow_cross_orient_sequence_U();
     }
     else if(wall_front.tm == right_color && wall_right.tm == back_color) {
-        yellow_orient_sequence_U2();
+        yellow_cross_orient_sequence_U2();
     }
 
     // =========================================================
@@ -643,15 +643,15 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_left.tm == back_color && wall_front.tm == left_color) {
         y();
-        yellow_orient_sequence_no_Up();
+        yellow_cross_orient_sequence_no_Up();
     }
     else if(wall_front.tm == back_color && wall_right.tm == left_color) {
         y();
-        yellow_orient_sequence_U();
+        yellow_cross_orient_sequence_U();
     }
     else if(wall_right.tm == back_color && wall_back.tm == left_color) {
         y();
-        yellow_orient_sequence_U2();
+        yellow_cross_orient_sequence_U2();
     }
 
 
@@ -663,15 +663,15 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_front.tm == left_color && wall_right.tm == front_color) {
         y2();
-        yellow_orient_sequence_no_Up();
+        yellow_cross_orient_sequence_no_Up();
     }
     else if(wall_right.tm == left_color && wall_back.tm == front_color) {
         y2();
-        yellow_orient_sequence_U();
+        yellow_cross_orient_sequence_U();
     }
     else if(wall_back.tm == left_color && wall_left.tm == front_color) {
         y2();
-        yellow_orient_sequence_U2();
+        yellow_cross_orient_sequence_U2();
     }
 
     // =========================================================
@@ -682,20 +682,35 @@ void Cube::solve_yellow_cross_orientation() {
     }
     else if(wall_right.tm == front_color && wall_back.tm == right_color) {
         yp();
-        yellow_orient_sequence_no_Up();
+        yellow_cross_orient_sequence_no_Up();
     }
     else if(wall_back.tm == front_color && wall_left.tm == right_color) {
         yp();
-        yellow_orient_sequence_U();
+        yellow_cross_orient_sequence_U();
     }
     else if(wall_left.tm == front_color && wall_front.tm == right_color) {
         yp();
-        yellow_orient_sequence_U2();
+        yellow_cross_orient_sequence_U2();
     }
     cout<<endl;
 }
 
 void Cube::solve_yellow_coners_orientation() {
-    if(!is_yellow_cross_oriented) return;
-    
+    if(!is_yellow_cross_oriented()) return;
+    if(is_yellow_corners_oriented()) return;
+
+    for(int i=0; i<4; i++) {
+
+    }
+
+
+
+    // int i = 0;
+    // while(true){
+
+
+    //     if(is_yellow_corners_oriented()) break;
+    //     i++;
+    //     if(i>1) break;
+    // }
 }

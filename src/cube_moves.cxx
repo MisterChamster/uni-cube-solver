@@ -783,7 +783,7 @@ void Cube::yellow_cross_2s() {
     Fp();
 }
 
-void Cube::yellow_orient_sequence() {
+void Cube::yellow_cross_orient_sequence() {
     Up();
     R();
     U2();
@@ -794,7 +794,7 @@ void Cube::yellow_orient_sequence() {
     Rp();
 }
 
-void Cube::yellow_orient_sequence_no_Up() {
+void Cube::yellow_cross_orient_sequence_no_Up() {
     R();
     U2();
     Rp();
@@ -804,7 +804,7 @@ void Cube::yellow_orient_sequence_no_Up() {
     Rp();
 }
 
-void Cube::yellow_orient_sequence_U2() {
+void Cube::yellow_cross_orient_sequence_U2() {
     U2();
     R();
     U2();
@@ -815,7 +815,7 @@ void Cube::yellow_orient_sequence_U2() {
     Rp();
 }
 
-void Cube::yellow_orient_sequence_U() {
+void Cube::yellow_cross_orient_sequence_U() {
     U();
     R();
     U2();
