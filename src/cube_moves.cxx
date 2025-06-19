@@ -825,3 +825,14 @@ void Cube::yellow_cross_orient_sequence_U() {
     Up();
     Rp();
 }
+
+void Cube::yellow_corners_orient_sequence() {
+    U();
+    R();
+    Up();
+    Lp();
+    U();
+    Rp();
+    Up();
+    L();
+}
