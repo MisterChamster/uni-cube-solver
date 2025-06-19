@@ -593,7 +593,7 @@ void Cube::yellow_orientation_prepare() {
     Color left_color  = wall_left.mm;
     Color back_color  = wall_back.mm;
 
-    // prepared
+    // already prepared
     if(wall_right.tm == right_color && wall_back.tm == back_color) return;
 
 
@@ -601,37 +601,37 @@ void Cube::yellow_orientation_prepare() {
     // ================= All horizontal lines =================
     // ========================================================
     if(wall_right.tm == right_color && wall_left.tm == left_color) {
-        
+        yellow_orient_sequence();
+        y();
+        U();
     }
     else if(wall_right.tm == left_color && wall_left.tm == right_color) {
-        
+        yellow_orient_sequence();
+        yp();
+        Up();
     }
     else if(wall_right.tm == front_color && wall_left.tm == back_color) {
-        
+        yellow_orient_sequence();
+        U2();
     }
     else if(wall_right.tm == back_color && wall_left.tm == front_color) {
-        
+        yellow_orient_sequence();
+        y2();
     }
 
-    // ========================================================
-    // ================== All vertical lines ==================
-    // ========================================================
-    else if(wall_front.tm == right_color && wall_back.tm == left_color) {
-        
-    }
-    else if(wall_front.tm == left_color && wall_back.tm == right_color) {
-        
-    }
-    else if(wall_front.tm == front_color && wall_back.tm == back_color) {
-        
-    }
-    else if(wall_front.tm == back_color && wall_back.tm == front_color) {
-        
-    }
 
     // ========================================================
     // ==================== Back and right ====================
     // ========================================================
+    else if(wall_back.tm == right_color && wall_left.tm == back_color) {
+        U();
+    }
+    else if(wall_left.tm == right_color && wall_front.tm == back_color) {
+        U2();
+    }
+    else if(wall_front.tm == right_color && wall_right.tm == back_color) {
+        Up();
+    }
 
     // =========================================================
     // ===================== Left and back =====================
