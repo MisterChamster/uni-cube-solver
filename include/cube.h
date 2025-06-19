@@ -97,8 +97,11 @@ public:
     void f2l_left();
     void f2l_left_from_right_layer();
     void f2l_reverse();
+
     void RURU();
     void RURU2();
+    void yellow_cross_1s();
+    void yellow_cross_2s();
 
 
 

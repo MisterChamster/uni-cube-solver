@@ -552,10 +552,38 @@ void Cube::solve_yellow_cross() {
     // ========================================================
     // ================== Good orients + dot ==================
     // ========================================================
+    if(wall_up.tm == Color::yellow && wall_up.ml == Color::yellow) {
+        yellow_cross_2s();
+    }
+    else if(wall_up.mr == Color::yellow && wall_up.ml == Color::yellow) {
+        yellow_cross_1s();
+    }
+    else if(wall_up.mr != Color::yellow &&
+            wall_up.tm != Color::yellow &&
+            wall_up.ml != Color::yellow &&
+            wall_up.dm != Color::yellow) {
+
+        yellow_cross_2s();
+        yp();
+
+        yellow_cross_1s();
+    }
 
     // =========================================================
     // ======================= L orients =======================
     // =========================================================
+    else if(wall_up.ml == Color::yellow && wall_up.dm == Color::yellow) {
+        U();
+        yellow_cross_2s();
+    }
+    else if(wall_up.dm == Color::yellow && wall_up.mr == Color::yellow) {
+        U2();
+        yellow_cross_2s();
+    }
+    else if(wall_up.mr == Color::yellow && wall_up.tm == Color::yellow) {
+        Up();
+        yellow_cross_2s();
+    }
 
     // ========================================================
     // ===================== Line orients =====================

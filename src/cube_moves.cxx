@@ -760,3 +760,15 @@ void Cube::RURU2() {
     RURU();
     RURU();
 }
+
+void Cube::yellow_cross_1s() {
+    F();
+    RURU();
+    Fp();
+}
+
+void Cube::yellow_cross_2s() {
+    F();
+    RURU2();
+    Fp();
+}
