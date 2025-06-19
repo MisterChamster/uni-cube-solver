@@ -803,3 +803,25 @@ void Cube::yellow_orient_sequence_no_Up() {
     Up();
     Rp();
 }
+
+void Cube::yellow_orient_sequence_U2() {
+    U2();
+    R();
+    U2();
+    Rp();
+    Up();
+    R();
+    Up();
+    Rp();
+}
+
+void Cube::yellow_orient_sequence_U() {
+    U();
+    R();
+    U2();
+    Rp();
+    Up();
+    R();
+    Up();
+    Rp();
+}

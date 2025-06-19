@@ -105,6 +105,8 @@ private:
 
     void yellow_orient_sequence();
     void yellow_orient_sequence_no_Up();
+    void yellow_orient_sequence_U2();
+    void yellow_orient_sequence_U();
 
 public:
     void white_layer_down();

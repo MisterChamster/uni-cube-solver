@@ -603,7 +603,7 @@ void Cube::yellow_orientation_prepare() {
     if(wall_right.tm == right_color && wall_left.tm == left_color) {
         yellow_orient_sequence();
         y();
-        U();
+        yellow_orient_sequence_no_Up();
     }
     else if(wall_right.tm == left_color && wall_left.tm == right_color) {
         yellow_orient_sequence();
@@ -624,7 +624,7 @@ void Cube::yellow_orientation_prepare() {
     // ==================== Back and right ====================
     // ========================================================
     else if(wall_back.tm == right_color && wall_left.tm == back_color) {
-        U();
+        yellow_orient_sequence_no_Up();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
         U2();
@@ -641,7 +641,7 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_left.tm == back_color && wall_front.tm == left_color) {
         y();
-        U();
+        yellow_orient_sequence_no_Up();
     }
     else if(wall_front.tm == back_color && wall_right.tm == left_color) {
         y();
@@ -661,7 +661,7 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_front.tm == left_color && wall_right.tm == front_color) {
         y2();
-        U();
+        yellow_orient_sequence_no_Up();
     }
     else if(wall_right.tm == left_color && wall_back.tm == front_color) {
         y2();
@@ -680,7 +680,7 @@ void Cube::yellow_orientation_prepare() {
     }
     else if(wall_right.tm == front_color && wall_back.tm == right_color) {
         yp();
-        U();
+        yellow_orient_sequence_no_Up();
     }
     else if(wall_back.tm == front_color && wall_left.tm == right_color) {
         yp();
