@@ -736,22 +736,22 @@ void Cube::solve_yellow_corners_placing() {
 void Cube::yellow_corners_orientation_prepare_cube(bool &flag) {
     Color down_color = wall_down.mm;
     if(wall_down.tr != down_color) {
-        cout<<"wall_down.tr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
+        // cout<<"wall_down.tr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
         cout<<"Returning\n";
         return;
     }
     if(wall_down.dr != down_color) {
-        cout<<"wall_down.dr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
+        // cout<<"wall_down.dr: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
         cout<<"Doing DP\n";
         Dp();
     }
     else if(wall_down.dl != down_color) {
-        cout<<"wall_down.dl: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
+        // cout<<"wall_down.dl: "<<wall_down.dl<<". down_color: "<<down_color<<"\n";
         cout<<"Doing D2\n";
         D2();
     }
     else {
-        cout<<"We're free to go, chief\n";
+        // cout<<"We're free to go, chief\n";
         flag = true;
     }
 }
@@ -763,6 +763,13 @@ void Cube::yellow_corners_algorithm() {
     else cout<<"\ncube_solving.cxx.yellow_corners_algorithm() error: wall_front.dr corner should not be solved. Dumbass.\n";
 }
 
+void Cube::orient_down_layer() {
+    Color front_color = wall_front.mm;
+    if(wall_right.dm == front_color) Dp();
+    else if(wall_back.dm == front_color) D2();
+    else if(wall_left.dm == front_color) Dp();
+}
+
 void Cube::yellow_corners_orientation() {
     bool flagger = false;
     for(int i=0; i<4; i++) {
@@ -770,11 +777,6 @@ void Cube::yellow_corners_orientation() {
         if(flagger == true) break;
         yellow_corners_algorithm();
     }
-}
-
-void Cube::orient_down_layer() {
-    Color front_color = wall_front.mm;
-    if(wall_right.dm == front_color) Dp();
-    else if(wall_back.dm == front_color) D2();
-    else if(wall_left.dm == front_color) Dp();
+    orient_down_layer();
+    cout<<endl;
 }

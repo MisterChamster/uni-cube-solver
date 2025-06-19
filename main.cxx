@@ -46,14 +46,6 @@ int main() {
 
     mi.print_cube();
 
-    // if(solvd_qb.is_white_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_white_layer()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_f2l()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_yellow_cross()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_yellow_cross_oriented()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_yellow_corners_placed()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-    // if(solvd_qb.is_solved()) cout<<"FUUUUUUCK YOUUUUUUUUU"<<endl;
-
     return 0;
 }
 
