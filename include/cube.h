@@ -127,7 +127,8 @@ public:
     bool is_f2l();
     bool is_yellow_cross();
     bool is_yellow_cross_oriented();
-    bool is_corner_oriented(string up_corner);
+    bool is_yellow_corner_oriented(string up_corner);
+    bool is_yellow_corners_oriented();
     bool is_solved();
 
 
