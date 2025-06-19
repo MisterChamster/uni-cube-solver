@@ -142,14 +142,20 @@ bool Cube::is_yellow_cross() {
     if(wall_up.tm == Color::yellow &&
        wall_up.mr == Color::yellow &&
        wall_up.ml == Color::yellow &&
-       wall_up.dm == Color::yellow) {
-        // If edge pieces match wall colors...
-        if(wall_front.tm == wall_front.mm &&
-           wall_right.tm == wall_right.mm &&
-           // vvvvvvvv Free one to omit vvvvvvvv
-           // wall_left.tm  == wall_left.mm  &&
-           wall_back.tm  == wall_back.mm) return true;
-    }
+       wall_up.dm == Color::yellow) return true;
+
+    return false;
+}
+
+bool Cube::is_yellow_cross_oriented() {
+    if(!is_yellow_cross()) return false;
+
+    // If edge pieces match wall colors...
+    if(wall_front.tm == wall_front.mm &&
+        wall_right.tm == wall_right.mm &&
+        // vvvvvvvv Free one to omit vvvvvvvv
+        // wall_left.tm  == wall_left.mm  &&
+        wall_back.tm  == wall_back.mm) return true;
 
     return false;
 }

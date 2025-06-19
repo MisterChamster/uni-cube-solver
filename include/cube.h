@@ -98,6 +98,7 @@ public:
     void f2l_left_from_right_layer();
     void f2l_reverse();
     void RURU();
+    void RURU2();
 
 
 
@@ -114,6 +115,7 @@ public:
     bool is_white_layer();
     bool is_f2l();
     bool is_yellow_cross();
+    bool is_yellow_cross_oriented();
     bool is_solved();
 
 
@@ -130,6 +132,7 @@ public:
     void solve_white_cross();
     void solve_white_layer();
     void solve_f2l();
+    void solve_yellow_cross();
 
 
 

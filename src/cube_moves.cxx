@@ -755,3 +755,8 @@ void Cube::RURU() {
     Rp();
     Up();
 }
+
+void Cube::RURU2() {
+    RURU();
+    RURU();
+}
