@@ -622,14 +622,17 @@ void Cube::solve_yellow_cross_orientation() {
     // ========================================================
     if(wall_back.tm == right_color && wall_left.tm == back_color) {
         U();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
         U2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == right_color && wall_right.tm == back_color) {
         Up();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
 
@@ -639,21 +642,25 @@ void Cube::solve_yellow_cross_orientation() {
     // =========================================================
     else if(wall_back.tm == back_color && wall_left.tm == left_color) {
         y();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == back_color && wall_front.tm == left_color) {
         y();
         U();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == back_color && wall_right.tm == left_color) {
         y();
         U2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == back_color && wall_back.tm == left_color) {
         y();
         Up();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
 
@@ -663,21 +670,25 @@ void Cube::solve_yellow_cross_orientation() {
     // ========================================================
     else if(wall_left.tm == left_color && wall_front.tm == front_color) {
         y2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_front.tm == left_color && wall_right.tm == front_color) {
         y2();
         U();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == left_color && wall_back.tm == front_color) {
         y2();
         U2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_back.tm == left_color && wall_left.tm == front_color) {
         y2();
         Up();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
 
@@ -687,21 +698,25 @@ void Cube::solve_yellow_cross_orientation() {
     // =========================================================
     else if(wall_front.tm == front_color && wall_right.tm == right_color) {
         yp();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == front_color && wall_back.tm == right_color) {
         yp();
         U();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_back.tm == front_color && wall_left.tm == right_color) {
         yp();
         U2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == front_color && wall_front.tm == right_color) {
         yp();
         Up();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
 
@@ -710,23 +725,30 @@ void Cube::solve_yellow_cross_orientation() {
     // ================= All horizontal lines =================
     // ========================================================
     else if(wall_right.tm == right_color && wall_left.tm == left_color) {
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
         y();
         U();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == left_color && wall_left.tm == right_color) {
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
         yp();
         Up();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == front_color && wall_left.tm == back_color) {
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
         U2();
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
     }
     else if(wall_right.tm == back_color && wall_left.tm == front_color) {
+        if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
         y2();
     }
