@@ -802,4 +802,5 @@ void Cube::solve() {
     cout<<endl;
     yellow_corners_orientation();
     cout<<endl;
+    if(!is_solved()) cout<<"cube_solving.cxx.solve() error: Cube is not solved.";
 }

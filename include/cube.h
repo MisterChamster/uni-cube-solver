@@ -9,10 +9,10 @@ using namespace std;
 
 
 class Cube{
-public:
     // ========================================================================
     // ================================ Fields ================================
     // ========================================================================
+public:
     Wall wall_front = Wall(Color::blue);
     Wall wall_right = Wall(Color::red);
     Wall wall_left  = Wall(Color::orange);
@@ -25,6 +25,7 @@ public:
     // ========================================================================
     // ============================= Constructors =============================
     // ========================================================================
+public:
     //solved cube constructor
     Cube();
 
@@ -46,6 +47,7 @@ public:
     // =========================================================================
     // ============================ Methods - moves ============================
     // =========================================================================
+private:
 
     // =============== Basic ================
     void F();
@@ -117,9 +119,6 @@ private:
     // =========================================================================
 private:
     void user_input_wall(string wall_name);
-
-public:
-    void print_cube();
     void user_input_all_walls();
     bool is_white_cross();
     bool is_white_layer();
@@ -129,6 +128,9 @@ public:
     bool is_yellow_corner_placed(string up_corner);
     bool is_yellow_corners_placed();
     bool is_solved();
+
+public:
+    void print_cube();
 
 
 
@@ -143,8 +145,6 @@ private:
     void yellow_corners_orientation_prepare_cube(bool &flag);
     void yellow_corners_algorithm();
     void orient_down_layer();
-
-public:
     void white_layer_down();
     void solve_white_cross();
     void solve_white_layer();
@@ -153,6 +153,8 @@ public:
     void solve_yellow_cross_orientation();
     void solve_yellow_corners_placing();
     void yellow_corners_orientation();
+
+public:
     void solve();
 
 };
