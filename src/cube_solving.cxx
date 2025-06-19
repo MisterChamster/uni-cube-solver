@@ -730,16 +730,30 @@ void Cube::solve_yellow_coners_placing() {
     if(is_yellow_corners_placed()) return;
     yellow_corners_orient_sequence();
     if(is_yellow_corners_placed()) return;
-    else cout<<"cube_solving.cxx error: Orient sequence didn't orient properly after 2 tries. Idiot.";
+    else cout<<"\ncube_solving.cxx.solve_yellow_coners_placing() error: Orient sequence didn't orient properly after 2 tries. Idiot.\n";
 }
 
-void Cube::yellow_coners_orientation_prepare_cube() {
+void Cube::yellow_coners_orientation_prepare_cube(bool flag) {
     Color down_color = wall_down.mm;
     if(wall_down.tr != down_color) return;
     if(wall_down.dr != down_color) Dp();
     else if(wall_down.dl != down_color) D2();
+    else flag = true;
+}
+
+void Cube::yellow_corners_algorithm() {
+    Color down_color = wall_down.mm;
+    if(wall_front.dr == down_color) {RURU2(); RURU2();}
+    else if(wall_right.dl == down_color) RURU2();
+    else cout<<"\ncube_solving.cxx.yellow_corners_algorithm() error: wall_front.dr corner should not be solved. Dumbass.\n";
 }
 
 void Cube::yellow_coners_orientation() {
+    bool flag = false;
+    for(int i=0; i<4; i++) {
+        yellow_coners_orientation_prepare_cube(flag);
+        if(flag == true) break;
+        yellow_corners_algorithm();
+    }
 
 }

@@ -41,6 +41,8 @@ int main() {
     cout<<endl;
     mi.z2();
     cout<<endl;
+    mi.yellow_coners_orientation();
+    cout<<endl;
 
     mi.print_cube();
 
