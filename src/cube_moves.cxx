@@ -730,6 +730,16 @@ void Cube::f2l_left_from_right_layer() {
     F();
 }
 
+void Cube::f2l_right_from_left_layer() {
+    R();
+    Up();
+    Rp();
+    Up();
+    Fp();
+    U();
+    F();
+}
+
 void Cube::f2l_reverse() {
     Rp();
     F();

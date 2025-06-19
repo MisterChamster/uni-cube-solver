@@ -95,6 +95,7 @@ public:
 
     void f2l_right();
     void f2l_left();
+    void f2l_right_from_left_layer();
     void f2l_left_from_right_layer();
     void f2l_reverse();
 

@@ -420,8 +420,16 @@ void Cube::f2l_right_piece() {
     }
     else if(wall_front.ml == front_color && wall_left.mr == right_color) {
         f2l_left();
+        // U();
+        // f2l_right();
+        U2();
+        R();
+        Up();
+        Rp();
+        Up();
+        Fp();
         U();
-        f2l_right();
+        F();
         cout<<endl;
     }
 
