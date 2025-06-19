@@ -5,6 +5,14 @@
 
 
 
+void Cube::white_layer_down() {
+    if     (wall_up.mm    == Color::white) {z(); z();}
+    else if(wall_front.mm == Color::white)  xp();
+    else if(wall_right.mm == Color::white)  z();
+    else if(wall_left.mm  == Color::white)  zp();
+    else if(wall_back.mm  == Color::white)  x();
+}
+
 void Cube::white_cross_edge() {
     Color front_color = wall_front.mm;
     // If edge in the right place - return

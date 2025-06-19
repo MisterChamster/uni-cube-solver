@@ -110,9 +110,6 @@ private:
 
     void yellow_corners_orient_sequence();
 
-public:
-    void white_layer_down();
-
 
 
     // =========================================================================
@@ -145,6 +142,7 @@ private:
     void yellow_corners_placement_prepare_cube();
 
 public:
+    void white_layer_down();
     void solve_white_cross();
     void solve_white_layer();
     void solve_f2l();
