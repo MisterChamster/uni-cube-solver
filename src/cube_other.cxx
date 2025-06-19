@@ -160,6 +160,39 @@ bool Cube::is_yellow_cross_oriented() {
     return false;
 }
 
+bool Cube::is_corner_oriented(string up_corner) {
+    if(!is_yellow_cross_oriented()) return false;
+
+    Color front_color = wall_front.mm;
+    Color right_color = wall_right.mm;
+    Color left_color  = wall_left.mm;
+    Color back_color  = wall_back.mm;
+    Color up_color    = wall_up.mm;
+
+    if(up_corner == "dr") {
+        if(wall_front.tr == front_color && wall_up.dr == up_color)    return true;
+        if(wall_front.tr == up_color    && wall_up.dr == right_color) return true;
+        if(wall_front.tr == right_color && wall_up.dr == front_color) return true;
+    }
+    else if(up_corner == "tr") {
+        if(wall_right.tr == right_color && wall_up.tr == up_color)    return true;
+        if(wall_right.tr == up_color    && wall_up.tr == back_color)  return true;
+        if(wall_right.tr == back_color  && wall_up.tr == right_color) return true;
+    }
+    else if(up_corner == "tl") {
+        if(wall_back.tr == back_color && wall_up.tl == up_color)   return true;
+        if(wall_back.tr == up_color   && wall_up.tl == left_color) return true;
+        if(wall_back.tr == left_color && wall_up.tl == back_color) return true;
+    }
+    else if(up_corner == "dl") {
+        if(wall_left.tr == left_color  && wall_up.dl == up_color)    return true;
+        if(wall_left.tr == up_color    && wall_up.dl == front_color) return true;
+        if(wall_left.tr == front_color && wall_up.dl == left_color)  return true;
+    }
+
+    return false;
+}
+
 bool Cube::is_solved(){
     if(!is_yellow_cross()) return false;
 

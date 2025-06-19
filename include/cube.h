@@ -127,6 +127,7 @@ public:
     bool is_f2l();
     bool is_yellow_cross();
     bool is_yellow_cross_oriented();
+    bool is_corner_oriented(string up_corner);
     bool is_solved();
 
 
@@ -138,7 +139,6 @@ private:
     void white_cross_edge();
     void white_layer_corner();
     void f2l_right_piece();
-    // void yellow_orientation_prepare();
 
 public:
     void solve_white_cross();
@@ -146,6 +146,7 @@ public:
     void solve_f2l();
     void solve_yellow_cross();
     void solve_yellow_cross_orientation();
+    void solve_yellow_coners_orientation();
 
 
 

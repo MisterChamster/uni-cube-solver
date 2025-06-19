@@ -694,3 +694,8 @@ void Cube::solve_yellow_cross_orientation() {
     }
     cout<<endl;
 }
+
+void Cube::solve_yellow_coners_orientation() {
+    if(!is_yellow_cross_oriented) return;
+    
+}
