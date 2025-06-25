@@ -626,6 +626,7 @@ void Cube::solve_yellow_cross_orientation() {
         yellow_cross_orient_sequence();
     }
     else if(wall_left.tm == right_color && wall_front.tm == back_color) {
+        // cout<<"WINDOWWWWWWWWWWWWWWWWW\n";
         U2();
         if(is_yellow_cross_oriented()) return;
         yellow_cross_orient_sequence();
@@ -754,6 +755,7 @@ void Cube::solve_yellow_cross_orientation() {
     }
 
     cout<<endl;
+    if(!is_yellow_cross_oriented()) cout<<"cube_solving.cxx.solve_yellow_cross_orientation() error: Cross has not been oriented properly. Dummy.";
 }
 
 
@@ -851,6 +853,8 @@ void Cube::solve() {
     solve_yellow_cross();
     cout<<endl;
     solve_yellow_cross_orientation();
+    // cout<<endl;
+    // print_cube();
     cout<<endl;
     solve_yellow_corners_placing();
     cout<<endl;
