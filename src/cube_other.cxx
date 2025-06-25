@@ -205,11 +205,13 @@ bool Cube::is_yellow_corners_placed() {
 bool Cube::is_solved(){
     if(!is_yellow_corners_placed()) return false;
 
-    // If up corners are yellow...
-    if(wall_up.tl == Color::yellow &&
-       wall_up.tr == Color::yellow &&
-       wall_up.dl == Color::yellow &&
-       wall_up.dr == Color::yellow) return true;
+    if(wall_front.is_one_color() &&
+       wall_up.is_one_color()    &&
+       wall_right.is_one_color() &&
+       wall_left.is_one_color()  &&
+       wall_down.is_one_color() &&
+       wall_back.is_one_color())
+        return true;
 
     return false;
 }
