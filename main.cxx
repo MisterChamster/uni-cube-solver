@@ -68,4 +68,12 @@ int main() {
 // wowgogyry
 // rgrwwwrgr
 // gogygybrb
-// 
+
+
+// mf
+// bgyrobryw
+// oygobwowb
+// ooywwgror
+// gbwyywory
+// bogbggwyb
+// rgyrrbwrg

@@ -6,11 +6,11 @@
 
 // White Layer Down
 void Cube::white_layer_down() {
-    if     (wall_up.mm    == Color::white) {z(); z();}
-    else if(wall_front.mm == Color::white)  xp();
-    else if(wall_right.mm == Color::white)  z();
-    else if(wall_left.mm  == Color::white)  zp();
-    else if(wall_back.mm  == Color::white)  x();
+    if     (wall_up.mm    == Color::white) z2();
+    else if(wall_front.mm == Color::white) xp();
+    else if(wall_right.mm == Color::white) z();
+    else if(wall_left.mm  == Color::white) zp();
+    else if(wall_back.mm  == Color::white) x();
 }
 
 
@@ -354,7 +354,7 @@ void Cube::white_layer_corner() {
         corner_down_white_right_tl();
         cout<<endl;
     }
-    else if(wall_down.dl == Color::white && wall_back.dl == front_color) {
+    else if(wall_down.dl == Color::white && wall_back.dr == front_color) {
         L();
         U2();
         Lp();

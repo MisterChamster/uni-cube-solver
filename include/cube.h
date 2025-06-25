@@ -138,13 +138,6 @@ public:
     // =========================== Methods - solving ===========================
     // =========================================================================
 private:
-    void white_cross_edge();
-    void white_layer_corner();
-    void f2l_right_piece();
-    void yellow_corners_placement_prepare_cube();
-    void yellow_corners_orientation_prepare_cube(bool &flag);
-    void yellow_corners_algorithm();
-    void orient_down_layer();
     void white_layer_down();
     void solve_white_cross();
     void solve_white_layer();
@@ -153,6 +146,14 @@ private:
     void solve_yellow_cross_orientation();
     void solve_yellow_corners_placing();
     void yellow_corners_orientation();
+
+    void white_cross_edge();
+    void white_layer_corner();
+    void f2l_right_piece();
+    void yellow_corners_placement_prepare_cube();
+    void yellow_corners_orientation_prepare_cube(bool &flag);
+    void yellow_corners_algorithm();
+    void orient_down_layer();
 
 public:
     void solve();
