@@ -127,10 +127,10 @@ private:
     bool is_yellow_cross_oriented();
     bool is_yellow_corner_placed(string up_corner);
     bool is_yellow_corners_placed();
-    bool is_solved();
 
 public:
     void print_cube();
+    bool is_solved();
 
 
 

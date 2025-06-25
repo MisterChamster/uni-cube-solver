@@ -203,7 +203,19 @@ bool Cube::is_yellow_corners_placed() {
 }
 
 bool Cube::is_solved(){
-    if(!is_yellow_corners_placed()) return false;
+
+    // if(wall_front.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
+    // if(wall_up.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
+    // if(wall_right.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
+    // if(wall_left.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
+    // if(wall_down.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
+    // if(wall_back.is_one_color()) cout<<"Wall solvd\n";
+    // else cout<<"Wall not solvd\n";
 
     if(wall_front.is_one_color() &&
        wall_up.is_one_color()    &&

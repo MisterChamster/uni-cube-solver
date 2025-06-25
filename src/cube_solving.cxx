@@ -860,5 +860,6 @@ void Cube::solve() {
     cout<<endl;
     orient_down_layer();
     cout<<endl;
+    // print_cube();
     if(!is_solved()) cout<<"cube_solving.cxx.solve() error: Cube is not solved.\n";
 }
