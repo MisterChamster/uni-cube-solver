@@ -25,7 +25,7 @@ int main() {
     Cube mi;
     mi.solve();
 
-    mi.print_cube();
+    // mi.print_cube();
 
     return 0;
 }

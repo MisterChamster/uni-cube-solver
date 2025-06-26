@@ -782,6 +782,9 @@ void Cube::solve_yellow_corners_placing() {
     yellow_corners_placement_prepare_cube();
     yellow_corners_orient_sequence();
     if(is_yellow_corners_placed()) return;
+    // cout<<"\nI'm repeating the operation, fuckerzz";
+    cout<<endl;
+    yellow_corners_placement_prepare_cube();
     yellow_corners_orient_sequence();
     if(is_yellow_corners_placed()) return;
     else cout<<"\ncube_solving.cxx.solve_yellow_corners_placing() error: Orient sequence didn't orient properly after 2 tries. Idiot.\n";
@@ -826,8 +829,9 @@ void Cube::yellow_corners_orientation() {
         yellow_corners_orientation_prepare_cube(flagger);
         if(flagger == true) break;
         yellow_corners_algorithm();
+        cout<<endl;
     }
-    cout<<endl;
+    // cout<<endl;
 }
 
 // Yellow Layer Orientation
@@ -835,7 +839,7 @@ void Cube::orient_down_layer() {
     Color front_color = wall_front.mm;
     if(wall_right.dm == front_color) Dp();
     else if(wall_back.dm == front_color) D2();
-    else if(wall_left.dm == front_color) Dp();
+    else if(wall_left.dm == front_color) D();
 }
 
 // Solving
@@ -853,17 +857,21 @@ void Cube::solve() {
     solve_yellow_cross();
     cout<<endl;
     solve_yellow_cross_orientation();
-    // cout<<endl;
-    // print_cube();
     cout<<endl;
     solve_yellow_corners_placing();
     cout<<endl;
     z2();
+    // cout<<endl;
+    // print_cube();
     cout<<endl;
     yellow_corners_orientation();
     cout<<endl;
     orient_down_layer();
     cout<<endl;
     // print_cube();
-    if(!is_solved()) cout<<"cube_solving.cxx.solve() error: Cube is not solved.\n";
+    if(!is_solved()) {
+        cout<<"cube_solving.cxx.solve() error: Cube is not solved.\n";
+        cout<<endl;
+        print_cube();
+    }
 }
