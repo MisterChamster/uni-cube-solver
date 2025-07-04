@@ -1,4 +1,4 @@
-# cube-solver
+# Cube Solver
 Program built for solving a Rubik's cube using basic solving techniques. 
 
 ## Features
