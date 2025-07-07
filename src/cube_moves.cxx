@@ -786,38 +786,6 @@ void Cube::yellow_cross_orient_sequence() {
     Rp();
 }
 
-// void Cube::yellow_cross_orient_sequence_no_Up() {
-//     R();
-//     U2();
-//     Rp();
-//     Up();
-//     R();
-//     Up();
-//     Rp();
-// }
-
-// void Cube::yellow_cross_orient_sequence_U2() {
-//     U2();
-//     R();
-//     U2();
-//     Rp();
-//     Up();
-//     R();
-//     Up();
-//     Rp();
-// }
-
-// void Cube::yellow_cross_orient_sequence_U() {
-//     U();
-//     R();
-//     U2();
-//     Rp();
-//     Up();
-//     R();
-//     Up();
-//     Rp();
-// }
-
 void Cube::yellow_corners_orient_sequence() {
     U();
     R();
