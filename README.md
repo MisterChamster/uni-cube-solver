@@ -8,8 +8,8 @@ Program built for solving a Rubik's cube using basic solving techniques.
 
 ## Installation
 ```bash
-git clone https://github.com/MisterChamster/uni-cube-solver.git
-cd uni-cube-solver
+git clone https://github.com/MisterChamster/uni-cube-solver.git cube-solver
+cd cube-solver
 ```
 
 ## Compilation
