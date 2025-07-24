@@ -13,24 +13,25 @@ cd cube-solver
 ```
 
 ## Compilation
+Windows
 ```bash
-#Windows
 cmake -B build -G "Unix Makefiles"
 make -C build
 ```
+Linux/macOS
 ```bash
-#Linux/macOS
 cmake -B build
 make -C build
 ```
 
 ## Usage
+Windows
 ```bash
-#Windows
+Windows
 build\main
 ```
+Linux/macOS
 ```bash
-#Linux/macOS
 ./build/main
 ```
 
