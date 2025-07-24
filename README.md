@@ -27,7 +27,6 @@ make -C build
 ## Usage
 Windows
 ```bash
-Windows
 build\main
 ```
 Linux/macOS
