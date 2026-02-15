@@ -1,6 +1,13 @@
 # Cube Solver
 Program built for solving a Rubik's cube using basic solving techniques. 
 
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Compilation](#compilation)
+- [Usage](#usage)
+- [Additional notes](#additional-notes)
+
 ## Features
 - Prints a list of moves to solve a cube!
 - Very quick
